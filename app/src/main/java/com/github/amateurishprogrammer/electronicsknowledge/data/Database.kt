@@ -1,0 +1,10 @@
+package com.github.amateurishprogrammer.electronicsknowledge.data
+import android.content.Context
+import androidx.room.*
+import kotlinx.coroutines.flow.Flow
+@Entity(tableName="categories") data class CategoryEntity(@PrimaryKey val id:String,val title:String,val sortOrder:Int)
+@Entity(tableName="entries",indices=[Index("categoryId")]) data class EntryEntity(@PrimaryKey val id:String,val categoryId:String,val title:String,val searchText:String,val payload:String)
+@Entity(tableName="entry_state") data class EntryStateEntity(@PrimaryKey val entryId:String,val favorite:Boolean=false,val lastViewedAt:Long?=null)
+@Entity(tableName="content_meta") data class ContentMetaEntity(@PrimaryKey val key:String="active",val version:String)
+@Dao interface KnowledgeDao{@Query("SELECT * FROM categories ORDER BY sortOrder")fun categories():Flow<List<CategoryEntity>>;@Query("SELECT * FROM entries ORDER BY title COLLATE NOCASE")fun entries():Flow<List<EntryEntity>>;@Query("SELECT * FROM entry_state")fun states():Flow<List<EntryStateEntity>>;@Query("SELECT version FROM content_meta WHERE key='active'")suspend fun version():String?;@Insert(onConflict=OnConflictStrategy.REPLACE)suspend fun putCategories(v:List<CategoryEntity>);@Insert(onConflict=OnConflictStrategy.REPLACE)suspend fun putEntries(v:List<EntryEntity>);@Insert(onConflict=OnConflictStrategy.REPLACE)suspend fun putMeta(v:ContentMetaEntity);@Query("DELETE FROM categories")suspend fun clearCategories();@Query("DELETE FROM entries")suspend fun clearEntries();@Query("SELECT * FROM entry_state WHERE entryId=:id")suspend fun state(id:String):EntryStateEntity?;@Insert(onConflict=OnConflictStrategy.REPLACE)suspend fun putState(v:EntryStateEntity)}
+@Database(entities=[CategoryEntity::class,EntryEntity::class,EntryStateEntity::class,ContentMetaEntity::class],version=1,exportSchema=false)abstract class AppDatabase:RoomDatabase(){abstract fun dao():KnowledgeDao;companion object{@Volatile private var instance:AppDatabase?=null;fun get(c:Context)=instance?:synchronized(this){instance?:Room.databaseBuilder(c,AppDatabase::class.java,"knowledge.db").build().also{instance=it}}}}
