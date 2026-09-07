@@ -1,0 +1,10 @@
+{
+  "name": "Android 电子专业知识库",
+  "image": "mcr.microsoft.com/devcontainers/java:1-17-bookworm",
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/android-sdk:1": {},
+    "ghcr.io/devcontainers-contrib/features/gradle:2": { "version": "8.13" },
+    "ghcr.io/devcontainers/features/node:1": { "version": "22" }
+  },
+  "postCreateCommand": "sdkmanager 'platforms;android-36' 'build-tools;36.0.0' && npm test"
+}
