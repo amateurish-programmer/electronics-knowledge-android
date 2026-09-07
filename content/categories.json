@@ -1,0 +1,47 @@
+[
+  {
+    "id": "passive",
+    "title": "无源器件",
+    "sortOrder": 1
+  },
+  {
+    "id": "semiconductor",
+    "title": "分立半导体",
+    "sortOrder": 2
+  },
+  {
+    "id": "analog-power",
+    "title": "模拟与电源",
+    "sortOrder": 3
+  },
+  {
+    "id": "digital-control",
+    "title": "数字与控制",
+    "sortOrder": 4
+  },
+  {
+    "id": "interface",
+    "title": "接口与隔离",
+    "sortOrder": 5
+  },
+  {
+    "id": "sensor",
+    "title": "传感与测量",
+    "sortOrder": 6
+  },
+  {
+    "id": "electromechanical",
+    "title": "机电与连接",
+    "sortOrder": 7
+  },
+  {
+    "id": "display",
+    "title": "显示与声光",
+    "sortOrder": 8
+  },
+  {
+    "id": "protection",
+    "title": "保护与整流",
+    "sortOrder": 9
+  }
+]
