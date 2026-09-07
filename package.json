@@ -1,0 +1,10 @@
+{
+  "name": "electronics-knowledge-android",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test content/tools/test/*.test.mjs",
+    "content:validate": "node content/tools/validate-content.mjs",
+    "content:compile": "node content/tools/compile-content.mjs"
+  }
+}
