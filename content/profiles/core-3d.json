@@ -64,6 +64,8 @@
     "related": [
       "lcd1602",
       "seven-segment"
-    ]
+    ],
+    "publisher": "Solomon Systech",
+    "url": "https://www.solomon-systech.com/en/product/SSD1306"
   }
 }

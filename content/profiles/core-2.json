@@ -23,7 +23,9 @@
     "related": [
       "lm393",
       "op-amp"
-    ]
+    ],
+    "publisher": "Texas Instruments",
+    "url": "https://www.ti.com/product-category/amplifiers/comparators/overview.html"
   },
   "connector": {
     "summary": "提供可拆卸电气连接，承担信号、电源和机械定位。",
@@ -75,7 +77,9 @@
     "related": [
       "shunt-resistor",
       "adc"
-    ]
+    ],
+    "publisher": "Texas Instruments",
+    "url": "https://www.ti.com/product-category/amplifiers/current-sense/overview.html"
   },
   "current-transformer": {
     "summary": "电流互感器以磁耦合隔离测量交流电流，输出与匝数比相关。",
@@ -101,7 +105,9 @@
     "related": [
       "adc",
       "voltage-reference"
-    ]
+    ],
+    "publisher": "Texas Instruments",
+    "url": "https://www.ti.com/product-category/data-converters/overview.html"
   },
   "diode": {
     "summary": "二极管主要允许电流单向流动，可用于整流、钳位、续流和信号检波。",

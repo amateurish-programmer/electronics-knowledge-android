@@ -10,7 +10,9 @@
     "related": [
       "lm358",
       "comparator"
-    ]
+    ],
+    "publisher": "Texas Instruments",
+    "url": "https://www.ti.com/product-category/amplifiers/overview.html"
   },
   "optocoupler": {
     "summary": "用光在输入与输出之间传递信号，实现电气隔离。",

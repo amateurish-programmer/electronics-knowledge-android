@@ -55,8 +55,7 @@ export function validateManifest(manifest, expectedCount) {
   const errors = [];
   if (manifest?.schemaVersion !== 1) errors.push("manifest: unsupported schemaVersion");
   const contentVersion = manifest?.contentVersion;
-  if (!(Number.isInteger(contentVersion) && contentVersion > 0) &&
-      !(typeof contentVersion === "string" && /^(?:0|[1-9]\d*)(?:\.\d+){0,2}$/.test(contentVersion))) {
+  if (!(typeof contentVersion === "string" && /^(?:0|[1-9]\d*)(?:\.\d+){0,2}$/.test(contentVersion))) {
     errors.push("manifest: invalid contentVersion");
   }
   if (!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/.test(manifest?.generatedAt ?? "")) {
@@ -65,7 +64,9 @@ export function validateManifest(manifest, expectedCount) {
   if (!Number.isInteger(manifest?.entryCount) || manifest.entryCount !== expectedCount) {
     errors.push("manifest: entryCount does not match catalog");
   }
-  if (!/^[a-f0-9]{64}$/i.test(manifest?.sha256 ?? "")) errors.push("manifest: invalid sha256");
+  if (!/^[a-f0-9]{64}$/i.test(manifest?.sha256 ?? "") || /^0{64}$/.test(manifest?.sha256 ?? "")) {
+    errors.push("manifest: invalid sha256");
+  }
   return errors;
 }
 

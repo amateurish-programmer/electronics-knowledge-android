@@ -12,9 +12,9 @@ imageAlt: OLED显示模块分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: lcd1602|seven-segment
-sourceTitle: OLED显示模块官方技术资料
-sourcePublisher: Vishay
-sourceUrl: https://www.vishay.com/en/optical-sensors/
+sourceTitle: OLED显示模块参考资料
+sourcePublisher: Solomon Systech
+sourceUrl: https://www.solomon-systech.com/en/product/SSD1306
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介

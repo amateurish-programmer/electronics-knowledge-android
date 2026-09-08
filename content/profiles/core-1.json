@@ -98,7 +98,9 @@
     "related": [
       "dac",
       "voltage-reference"
-    ]
+    ],
+    "publisher": "Texas Instruments",
+    "url": "https://www.ti.com/product-category/data-converters/overview.html"
   },
   "ams1117": {
     "summary": "常见低压差线性稳压器系列，实际输出能力受压差与散热限制。",
@@ -193,7 +195,9 @@
     "related": [
       "speaker",
       "led"
-    ]
+    ],
+    "publisher": "Same Sky",
+    "url": "https://www.sameskydevices.com/blog/buzzer-basics-technologies-tones-and-driving-circuits"
   },
   "can-transceiver": {
     "summary": "在 CAN 控制器逻辑电平与 CANH/CANL 差分总线间完成物理层转换。",

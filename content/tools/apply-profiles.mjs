@@ -57,7 +57,7 @@ imageAlt: ${meta.imageAlt}
 imageAttribution: ${meta.imageAttribution}
 imageLicense: ${meta.imageLicense}
 relatedIds: ${profile.related.join("|")}
-sourceTitle: ${meta.title}官方技术资料
+sourceTitle: ${meta.title}参考资料
 sourcePublisher: ${publisher}
 sourceUrl: ${url}
 sourceAccessedAt: ${meta.sourceAccessedAt}

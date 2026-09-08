@@ -12,9 +12,9 @@ imageAlt: 扬声器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: lm386|buzzer
-sourceTitle: 扬声器官方技术资料
-sourcePublisher: Vishay
-sourceUrl: https://www.vishay.com/en/optical-sensors/
+sourceTitle: 扬声器参考资料
+sourcePublisher: Same Sky
+sourceUrl: https://www.sameskydevices.com/catalog/audio
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介

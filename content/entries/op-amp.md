@@ -12,9 +12,9 @@ imageAlt: 运算放大器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: lm358|comparator
-sourceTitle: 运算放大器官方技术资料
+sourceTitle: 运算放大器参考资料
 sourcePublisher: Texas Instruments
-sourceUrl: https://www.ti.com/power-management/overview.html
+sourceUrl: https://www.ti.com/product-category/amplifiers/overview.html
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介

@@ -12,9 +12,9 @@ imageAlt: 静态随机存储器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: w25q-flash|24c02
-sourceTitle: 静态随机存储器官方技术资料
-sourcePublisher: Texas Instruments
-sourceUrl: https://www.ti.com/logic-voltage-translation/overview.html
+sourceTitle: 静态随机存储器参考资料
+sourcePublisher: Infineon
+sourceUrl: https://www.infineon.com/products/memories/sram-static-ram
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介

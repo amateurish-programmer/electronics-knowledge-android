@@ -23,7 +23,9 @@
     "related": [
       "lm386",
       "buzzer"
-    ]
+    ],
+    "publisher": "Same Sky",
+    "url": "https://www.sameskydevices.com/catalog/audio"
   },
   "sram": {
     "summary": "静态随机存储器以双稳态单元保存数据，掉电后内容丢失。",
@@ -36,7 +38,9 @@
     "related": [
       "w25q-flash",
       "24c02"
-    ]
+    ],
+    "publisher": "Infineon",
+    "url": "https://www.infineon.com/products/memories/sram-static-ram"
   },
   "stm32f103": {
     "summary": "基于 Arm Cortex‑M3 的 STM32 微控制器系列，集成定时器、ADC 和多种通信接口。",

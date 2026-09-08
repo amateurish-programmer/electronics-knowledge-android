@@ -12,9 +12,9 @@ imageAlt: 电压比较器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: lm393|op-amp
-sourceTitle: 电压比较器官方技术资料
+sourceTitle: 电压比较器参考资料
 sourcePublisher: Texas Instruments
-sourceUrl: https://www.ti.com/power-management/overview.html
+sourceUrl: https://www.ti.com/product-category/amplifiers/comparators/overview.html
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介

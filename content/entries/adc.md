@@ -12,9 +12,9 @@ imageAlt: 模数转换器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: dac|voltage-reference
-sourceTitle: 模数转换器官方技术资料
+sourceTitle: 模数转换器参考资料
 sourcePublisher: Texas Instruments
-sourceUrl: https://www.ti.com/power-management/overview.html
+sourceUrl: https://www.ti.com/product-category/data-converters/overview.html
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介

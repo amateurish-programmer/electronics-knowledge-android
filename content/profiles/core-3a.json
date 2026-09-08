@@ -23,7 +23,9 @@
     "related": [
       "oled-module",
       "seven-segment"
-    ]
+    ],
+    "publisher": "Newhaven Display",
+    "url": "https://newhavendisplay.com/content/specs/NHD-C0216BA-FSW-GBW.pdf"
   },
   "ldo": {
     "summary": "在较小输入输出压差下提供稳定、低噪声电压的线性稳压器。",
