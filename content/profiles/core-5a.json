@@ -1,0 +1,69 @@
+{
+  "solid-state-relay": {
+    "summary": "用光耦和功率半导体实现无机械触点的隔离负载开关。",
+    "principle": "输入 LED 驱动隔离接收器，再控制双向可控硅、MOSFET 或晶闸管输出。",
+    "params": "输入电流、负载电压电流、通态压降、漏电、浪涌、过零和散热。",
+    "selection": "交流/直流负载、浪涌、开关频率、漏电和散热",
+    "usage": "加热器、灯具、电磁阀和频繁动作负载控制。",
+    "caution": "关断仍有漏电，导通压降会发热；交流型通常不能开直流。",
+    "faults": "类型选错、无散热、负载太小不关断、浪涌超限或缺少吸收。",
+    "related": [
+      "relay",
+      "triac"
+    ]
+  },
+  "speaker": {
+    "summary": "扬声器把交流电信号转换为空气振动和声音。",
+    "principle": "音圈在永磁体磁场中受力带动振膜，电流方向和幅度决定振动。",
+    "params": "阻抗、额定/峰值功率、灵敏度、频响、谐振频率和尺寸。",
+    "selection": "放大器能力、阻抗、声压、频段、腔体和功率",
+    "usage": "语音、音乐、告警和人机提示，需配功率放大器。",
+    "caution": "直流偏置会使音圈发热，腔体与安装显著影响低频。",
+    "faults": "阻抗不匹配、功率虚标、直接接 GPIO、削波烧音圈或相位接反。",
+    "related": [
+      "lm386",
+      "buzzer"
+    ]
+  },
+  "sram": {
+    "summary": "静态随机存储器以双稳态单元保存数据，掉电后内容丢失。",
+    "principle": "交叉耦合晶体管形成锁存单元，只要供电存在就无需刷新。",
+    "params": "容量、组织、供电、访问时间、待机电流、接口时序和封装。",
+    "selection": "容量、总线宽度、速度、功耗、电平和数据保持",
+    "usage": "高速缓存、帧缓冲、采集缓存和 MCU 外扩 RAM。",
+    "caution": "地址、数据和控制线必须满足时序，备用电池保持需评估漏电。",
+    "faults": "读写使能冲突、总线争用、地址线错位、上电未初始化或越界访问。",
+    "related": [
+      "w25q-flash",
+      "24c02"
+    ]
+  },
+  "stm32f103": {
+    "summary": "基于 Arm Cortex‑M3 的 STM32 微控制器系列，集成定时器、ADC 和多种通信接口。",
+    "principle": "内核执行片上 Flash 程序，通过 AHB/APB 总线和中断控制外设。",
+    "params": "具体料号、Flash/RAM、主频、GPIO、ADC、定时器、接口和封装。",
+    "selection": "资源、引脚复用、时钟、调试、温度、封装和供货",
+    "usage": "电机控制、仪表、工业通信、数据采集和通用嵌入式控制。",
+    "caution": "F103 子型号资源差异大；电源、BOOT、复位、晶振和调试脚按手册设计。",
+    "faults": "时钟树配置错、复用冲突、VDDA 未接、启动脚漂浮或克隆芯片差异。",
+    "related": [
+      "mcu",
+      "atmega328p"
+    ],
+    "publisher": "STMicroelectronics",
+    "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32f103.html"
+  },
+  "tantalum-capacitor": {
+    "summary": "以钽氧化物为介质的有极性电容，单位体积容量高且参数较稳定。",
+    "principle": "烧结钽阳极形成高表面积氧化膜，阴极电解质完成电容结构。",
+    "params": "容量、耐压、ESR、纹波、漏电、浪涌、极性和失效等级。",
+    "selection": "电压降额、浪涌、ESR、温度、可靠性和封装",
+    "usage": "电源滤波、低频去耦和空间受限的容量储备。",
+    "caution": "反接或浪涌过大可能短路并起火，通常需要显著电压降额。",
+    "faults": "耐压余量小、无浪涌限制、极性接反或用普通钽替代聚合物钽。",
+    "related": [
+      "capacitor",
+      "electrolytic-capacitor"
+    ]
+  }
+}
