@@ -17,3 +17,25 @@ dependencies {
  implementation("androidx.datastore:datastore-preferences:1.1.7");implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.1");implementation("io.coil-kt.coil3:coil-compose:3.2.0");implementation("io.coil-kt.coil3:coil-svg:3.2.0")
  testImplementation("junit:junit:4.13.2");testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.10.2");androidTestImplementation("androidx.test.ext:junit:1.2.1");androidTestImplementation("androidx.compose.ui:ui-test-junit4");debugImplementation("androidx.compose.ui:ui-test-manifest")
 }
+
+val compileContent by tasks.registering(Exec::class) {
+    group = "build"
+    description = "Validate and compile the versioned offline knowledge bundle"
+    workingDir(rootProject.projectDir)
+    commandLine("node", "content/tools/compile-content.mjs")
+    inputs.dir(rootProject.file("content/entries"))
+    inputs.dir(rootProject.file("content/assets"))
+    inputs.file(rootProject.file("content/categories.json"))
+    inputs.file(rootProject.file("content/manifest.json"))
+    inputs.files(
+        rootProject.file("content/tools/validator.mjs"),
+        rootProject.file("content/tools/validate-content.mjs"),
+        rootProject.file("content/tools/compile-content.mjs")
+    )
+    outputs.file(layout.projectDirectory.file("src/main/assets/content-bundle.json"))
+    outputs.dir(layout.projectDirectory.dir("src/main/assets/content/images"))
+}
+
+tasks.named("preBuild") {
+    dependsOn(compileContent)
+}
