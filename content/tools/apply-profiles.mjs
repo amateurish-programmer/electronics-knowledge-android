@@ -41,10 +41,8 @@ for (const name of entryFiles) {
   const filePath = path.join(entryDir, name);
   const meta = parseMeta(await readFile(filePath, "utf8"));
   const publisher = profile.publisher ?? meta.sourcePublisher;
-  const url = profile.url ?? meta.sourceUrl;
-  const keywords = [...new Set(
-    profile.usage.split(/[，。、；]/).map(value => value.trim()).filter(Boolean)
-  )].join("|");
+  const url = (profile.url ?? meta.sourceUrl).replace(/^http:/, "https:");
+  const keywords = [...new Set(profile.usage.split(/[，。、；]/).map(value => value.trim()).filter(Boolean))].join("|");
   const markdown = `---
 id: ${meta.id}
 kind: ${meta.kind}
