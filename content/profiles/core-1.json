@@ -1,0 +1,282 @@
+{
+  "24c02": {
+    "summary": "2 Kbit I²C 串行 EEPROM，用于保存少量掉电不丢失的配置与校准数据。",
+    "principle": "浮栅阵列通过器件地址和字地址访问，写入后需完成内部编程周期。",
+    "params": "容量、工作电压、I²C 时钟、页长度、写周期、写入寿命和保持时间。",
+    "selection": "系统电压、地址脚、总线速率、写入频率与封装",
+    "usage": "保存设备参数、序列号和校准系数；页写要处理边界，写后用 ACK polling。",
+    "caution": "SDA/SCL 需上拉；掉电不可中断关键写入，频繁写入应做磨损控制。",
+    "faults": "7 位地址与读写位混淆、页写回卷、写保护脚错误或未等待写周期。",
+    "related": [
+      "i2c-level-shifter",
+      "w25q-flash"
+    ],
+    "publisher": "Microchip",
+    "url": "https://www.microchip.com/en-us/product/AT24C02C"
+  },
+  "74hc00": {
+    "summary": "四路二输入与非门，用于组合逻辑、使能控制和简单逻辑变换。",
+    "principle": "只有两个输入都为高电平时输出低电平，四个门独立并共用电源。",
+    "params": "供电范围、输入阈值、传播延迟、输出驱动、静态电流和引脚。",
+    "selection": "逻辑系列、速度、扇出、负载电容和温度",
+    "usage": "构成与、或、非等逻辑，或用于门控和互锁信号。",
+    "caution": "未使用输入不得悬空，电源脚附近放置去耦电容。",
+    "faults": "HC/HCT 阈值混用、输入悬空、容性负载过大或遗漏供电脚。",
+    "related": [
+      "logic-gate",
+      "74hc14"
+    ],
+    "publisher": "Nexperia",
+    "url": "https://www.nexperia.com/product/74HC00"
+  },
+  "74hc14": {
+    "summary": "六路施密特触发反相器，适合慢边沿或有噪声的数字信号整形。",
+    "principle": "输入使用不同的上、下翻转阈值形成迟滞，抑制阈值附近重复跳变。",
+    "params": "供电、正负阈值、迟滞宽度、传播延迟、驱动能力和输入边沿。",
+    "selection": "输入电平、噪声、所需迟滞、速度和逻辑系列",
+    "usage": "按键整形、RC 振荡、复位清理和慢速传感信号数字化。",
+    "caution": "RC 振荡精度受阈值和温度影响，不应替代精密时钟。",
+    "faults": "误认为阈值固定、未去耦或用普通反相器替代施密特器件。",
+    "related": [
+      "74hc00",
+      "crystal"
+    ],
+    "publisher": "Nexperia",
+    "url": "https://www.nexperia.com/product/74HC14"
+  },
+  "74hc165": {
+    "summary": "8 位并入串出移位寄存器，用少量 MCU 引脚读取多路数字输入。",
+    "principle": "并行装载把八位输入锁存，随后时钟逐位从串行端移出。",
+    "params": "装载极性、时钟时序、级联延迟、供电、阈值和最高频率。",
+    "selection": "输入数量、扫描速度、级联长度和逻辑电平",
+    "usage": "读取按键、拨码和状态量，多片可级联扩展输入。",
+    "caution": "装载与移位需满足建立保持时间；机械按键仍需消抖。",
+    "faults": "装载极性接反、位序理解错误、时钟边沿或级联端接错。",
+    "related": [
+      "74hc595",
+      "push-button"
+    ],
+    "publisher": "Nexperia",
+    "url": "https://www.nexperia.com/product/74HC165"
+  },
+  "74hc595": {
+    "summary": "8 位串入并出移位寄存器，带独立锁存器和三态输出。",
+    "principle": "数据先随移位时钟进入寄存器，再由锁存时钟一次更新八路输出。",
+    "params": "供电、时钟、单脚与总电流、输出使能、级联延迟和上电状态。",
+    "selection": "输出数量、刷新速度、负载电流和三态需求",
+    "usage": "扩展 LED、数码管和控制信号；大负载需另加驱动器。",
+    "caution": "不得让逻辑输出过流，移位时保持锁存时钟稳定。",
+    "faults": "移位与锁存时钟混淆、位序相反、OE 悬空或总电流超限。",
+    "related": [
+      "74hc165",
+      "seven-segment"
+    ],
+    "publisher": "Nexperia",
+    "url": "https://www.nexperia.com/product/74HC595"
+  },
+  "accelerometer": {
+    "summary": "测量一个或多个轴向的比力，用于姿态、振动、运动和冲击检测。",
+    "principle": "MEMS 质量块受力位移，电容或压阻结构把位移转换为电信号。",
+    "params": "量程、噪声密度、零偏、灵敏度、带宽、采样率、轴数和温漂。",
+    "selection": "最大加速度、带宽、噪声、功耗、接口和安装方向",
+    "usage": "倾角估计、振动监测、跌落检测和运动唤醒，通常需校准。",
+    "caution": "静止时仍测得重力分量；安装应力和温度会引入偏差。",
+    "faults": "把重力当运动加速度、坐标轴弄反、采样混叠或忽略零偏。",
+    "related": [
+      "hall-sensor",
+      "rotary-encoder"
+    ]
+  },
+  "adc": {
+    "summary": "把连续模拟量映射为数字码，是传感和测量链路的核心。",
+    "principle": "采样保持取得输入，量化器按参考电压与分辨率划分码阶。",
+    "params": "分辨率、采样率、输入范围、参考源、INL/DNL、ENOB 和带宽。",
+    "selection": "信号带宽、动态范围、允许误差、通道数和延迟",
+    "usage": "电压电流采样、传感采集和数据记录，前端需抗混叠滤波。",
+    "caution": "输入不可越界；参考噪声、源阻抗和采样时间直接影响结果。",
+    "faults": "只看标称位数、忽略参考精度、建立不足或采样率过低。",
+    "related": [
+      "dac",
+      "voltage-reference"
+    ],
+    "publisher": "Texas Instruments",
+    "url": "https://www.ti.com/product-category/data-converters/overview.html"
+  },
+  "ams1117": {
+    "summary": "常见低压差线性稳压器系列，实际输出能力受压差与散热限制。",
+    "principle": "误差放大器调节串联调整管，使反馈电压跟随内部基准。",
+    "params": "具体后缀、输入上限、压差、静态电流、稳定电容和热阻。",
+    "selection": "输入输出压差、持续电流、温升、封装和电容 ESR",
+    "usage": "从较高直流电压获得低噪声局部电源，适合中小电流。",
+    "caution": "标称 1 A 并非所有工况可持续；必须按压差乘电流计算结温。",
+    "faults": "散热不足、不同厂商稳定性条件混用、引脚认错或电容不当振荡。",
+    "related": [
+      "ldo",
+      "lm7805"
+    ],
+    "publisher": "Advanced Monolithic Systems",
+    "url": "http://www.advanced-monolithic.com/pdf/ds1117.pdf"
+  },
+  "atmega328p": {
+    "summary": "8 位 AVR 微控制器，集成 Flash、SRAM、EEPROM、定时器、ADC 和串行接口。",
+    "principle": "CPU 从片上 Flash 取指，通过寄存器控制 GPIO 与各片上外设。",
+    "params": "电压与频率关系、存储容量、外设、封装、熔丝和低功耗模式。",
+    "selection": "程序与 RAM、外设、时钟、功耗、调试方式和封装",
+    "usage": "小型控制器、Arduino Uno 类原型、传感采集和简单人机界面。",
+    "caution": "熔丝配置错误会使时钟或编程口失效；AVCC/AREF 必须正确连接。",
+    "faults": "时钟熔丝不匹配、看门狗循环、SRAM 溢出或电平不兼容。",
+    "related": [
+      "mcu",
+      "stm32f103"
+    ],
+    "publisher": "Microchip",
+    "url": "https://www.microchip.com/en-us/product/ATmega328P"
+  },
+  "bjt": {
+    "summary": "用较小基极驱动控制集电极电流，可工作在线性放大区或开关区。",
+    "principle": "基极发射极正偏产生载流子注入，形成受基极驱动影响的集电极电流。",
+    "params": "极性、VCEO、IC、功耗、直流增益、VCE(sat)、频率和安全工作区。",
+    "selection": "工作电压、电流、增益、速度、散热和工作方式",
+    "usage": "小信号放大、低边开关、恒流源和推挽输出。",
+    "caution": "开关设计不能只按典型 β，需限制基极电流并校核结温。",
+    "faults": "E/B/C 引脚认错、基极无限流、把饱和压降当零或忽略二次击穿。",
+    "related": [
+      "npn-transistor",
+      "pnp-transistor"
+    ]
+  },
+  "boost-converter": {
+    "summary": "把较低直流电压转换为较高直流电压，常用于电池和母线升压。",
+    "principle": "开关导通时电感储能，关断时电感电流与输入共同向输出供能。",
+    "params": "输入范围、输出、占空比、频率、电感饱和、纹波、效率和环路。",
+    "selection": "最低输入、最大负载、启动、效率、瞬态和耐压余量",
+    "usage": "单节电池升压、LED 电源前级和辅助高压轨。",
+    "caution": "基本拓扑通常不能切断输入直通路径，启动与空载可能过冲。",
+    "faults": "电感饱和、开关耐压不足、反馈受噪声或补偿不稳定。",
+    "related": [
+      "buck-converter",
+      "inductor"
+    ]
+  },
+  "bridge-rectifier": {
+    "summary": "四只二极管组成的全波整流结构，把交流两半周变为同极性脉动直流。",
+    "principle": "每半周由一对对角二极管导通，负载电流方向保持一致。",
+    "params": "峰值反向电压、平均电流、浪涌电流、正向压降、漏电和热阻。",
+    "selection": "交流峰值、电容充电浪涌、负载、散热和隔离",
+    "usage": "工频变压器次级整流和通用交流输入电源前端。",
+    "caution": "电容输入产生尖峰电流；市电侧须满足保险、间距和触电防护。",
+    "faults": "把有效值当耐压、忽略双二极管损耗、端子接反或浪涌超限。",
+    "related": [
+      "rectifier-diode",
+      "transformer"
+    ]
+  },
+  "buck-converter": {
+    "summary": "用开关、电感和电容把较高直流电压高效转换为较低电压。",
+    "principle": "PWM 开关驱动电感连续供能，反馈环路调节占空比稳定输出。",
+    "params": "输入范围、输出电流、频率、电感纹波与饱和、效率和补偿。",
+    "selection": "最大输入、最小输出、负载瞬态、EMI、尺寸和散热",
+    "usage": "数字系统电源、电池降压和大电流低压轨。",
+    "caution": "反馈节点远离开关节点，高 di/dt 回路必须紧凑。",
+    "faults": "电感饱和、输入振铃、反馈取样错误、环路不稳或过热。",
+    "related": [
+      "boost-converter",
+      "ldo"
+    ]
+  },
+  "buzzer": {
+    "summary": "把电信号转成声音，分为内置振荡器的有源型和需交流驱动的无源型。",
+    "principle": "压电片或电磁线圈在交变驱动下振动，有源型内部另含振荡器。",
+    "params": "有源/无源、额定电压、频率、声压、电流、极性和安装。",
+    "selection": "提示音、音量、供电、功耗、驱动方式和环境",
+    "usage": "告警、按键反馈和状态提示，MCU 电流不足时加晶体管驱动。",
+    "caution": "电磁式需处理感应电压，压电式应在合适频率附近驱动。",
+    "faults": "无源型接直流无声、极性错误、GPIO 过流或频率不合适。",
+    "related": [
+      "speaker",
+      "led"
+    ],
+    "publisher": "Same Sky",
+    "url": "https://www.sameskydevices.com/blog/buzzer-basics-technologies-tones-and-driving-circuits"
+  },
+  "can-transceiver": {
+    "summary": "在 CAN 控制器逻辑电平与 CANH/CANL 差分总线间完成物理层转换。",
+    "principle": "发送端产生显性/隐性差分电平，接收端按差分电压恢复逻辑信号。",
+    "params": "供电与 I/O 电平、速率、共模、待机、故障耐受、ESD 和延迟。",
+    "selection": "CAN 速率、节点电压、线长、隔离需求和 EMC",
+    "usage": "汽车和工业设备网络，总线物理两端通常各接匹配终端。",
+    "caution": "收发器不负责协议仲裁；分支过长和地电位差会破坏通信。",
+    "faults": "CANH/L 反接、终端缺失或过多、电平不兼容或待机脚错误。",
+    "related": [
+      "tja1050",
+      "rs485-transceiver"
+    ]
+  },
+  "capacitor": {
+    "summary": "以电场储能，阻隔稳态直流并对变化电压产生充放电电流。",
+    "principle": "满足 Q=C·V 和 i=C·dv/dt，实际器件还存在 ESR、ESL 与漏电。",
+    "params": "容量、耐压、容差、温度、ESR、纹波、漏电和自谐振频率。",
+    "selection": "电压、频率、纹波、温度、寿命、尺寸和介质",
+    "usage": "电源去耦、滤波、储能、交流耦合、定时和谐振。",
+    "caution": "有极性电容不得反接；不同介质需分别考虑降容和寿命。",
+    "faults": "只看标称容量、忽略 ESR/ESL、耐压不足、反接或未放电测量。",
+    "related": [
+      "ceramic-capacitor",
+      "electrolytic-capacitor"
+    ]
+  },
+  "cd4017": {
+    "summary": "十进制计数/分配器，每个有效时钟使高电平依次移动到 Q0 至 Q9。",
+    "principle": "Johnson 计数器经译码形成十个独热输出，并带复位和时钟禁止。",
+    "params": "供电、时钟阈值与频率、复位/禁止电平、驱动和传播延迟。",
+    "selection": "逻辑电压、级数、速度、负载和级联需求",
+    "usage": "流水灯、顺序控制、分频和简单扫描。",
+    "caution": "慢边沿时钟先整形，输出驱动能力有限。",
+    "faults": "复位悬空、禁止极性理解反、负载过重或毛刺导致多计数。",
+    "related": [
+      "counter",
+      "74hc14"
+    ]
+  },
+  "ceramic-capacitor": {
+    "summary": "低 ESR/ESL 的陶瓷介质电容，常用于高频去耦、滤波和谐振。",
+    "principle": "陶瓷介质形成电容；Class 1 稳定，Class 2 容量高但受偏压和温度影响。",
+    "params": "容量、介质、耐压、直流偏压曲线、容差、温度和自谐振。",
+    "selection": "有效容量、频率、稳定性、机械强度和电压",
+    "usage": "C0G/NP0 用于精密和谐振，X7R/X5R 用于电源去耦。",
+    "caution": "高容 MLCC 可能严重降容，大封装受板弯易裂。",
+    "faults": "忽略直流降容、用 Y5V 精密定时、板边开裂或压电噪声。",
+    "related": [
+      "capacitor",
+      "tantalum-capacitor"
+    ]
+  },
+  "ch340": {
+    "summary": "把 USB 转换为异步串口等接口，常用于 MCU 下载和调试。",
+    "principle": "完成 USB 枚举和端点传输，再转换为 TXD/RXD 与握手信号。",
+    "params": "具体子型号、波特率、供电、电平、晶振、封装和驱动支持。",
+    "selection": "目标电平、握手线、操作系统驱动、接口和封装",
+    "usage": "USB 转 TTL 串口模块、开发板下载口和维护接口。",
+    "caution": "USB D+/D− 要成对布线；TTL 电平不能直接连接 RS-232。",
+    "faults": "驱动缺失、TX/RX 未交叉、电平不匹配或 USB 走线差。",
+    "related": [
+      "uart-transceiver",
+      "max232"
+    ],
+    "publisher": "WCH",
+    "url": "https://www.wch-ic.com/products/CH340.html"
+  },
+  "charge-pump": {
+    "summary": "利用开关电容传递电荷，实现升压、反相或倍压的小功率电源。",
+    "principle": "飞跨电容在不同开关相位连接输入和输出，通过电荷重分配变换电压。",
+    "params": "输入、倍率、输出电流、频率、输出阻抗、纹波、效率和电容要求。",
+    "selection": "目标极性与倍率、负载、纹波、启动和电容尺寸",
+    "usage": "产生负压、接口偏置、小电流倍压和无电感辅助电源。",
+    "caution": "输出随开关电阻和 ESR 下垂，需评估空载和启动行为。",
+    "faults": "飞跨电容接错、容量耐压不足、过载压降或极性错误。",
+    "related": [
+      "boost-converter",
+      "dac"
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "ne555": {
+    "summary": "经典定时器 IC，可构成单稳态、无稳态振荡和延时控制。",
+    "principle": "比较器检测 1/3 与 2/3 电源阈值，RS 锁存控制输出和放电管。",
+    "params": "供电、阈值、输出电流、频率、定时误差、静态电流和复位。",
+    "selection": "供电、功耗、精度、频率、负载和 CMOS/双极型版本",
+    "usage": "延时、脉冲、PWM、LED 闪烁和简单振荡器。",
+    "caution": "长延时受电容漏电影响，控制电压脚通常需要旁路。",
+    "faults": "触发悬空、定时电容漏电、复位未拉高或去耦不足。",
+    "related": [
+      "comparator",
+      "74hc14"
+    ],
+    "publisher": "Texas Instruments",
+    "url": "https://www.ti.com/product/NE555"
+  },
+  "nmos": {
+    "summary": "栅极高于源极时导通的 N 沟道 MOSFET，常作低边和同步开关。",
+    "principle": "正栅源电压形成电子沟道，连接漏极和源极。",
+    "params": "VDS、ID、不同 VGS 的 RDS(on)、栅电荷、SOA、体二极管和热阻。",
+    "selection": "电压电流、逻辑驱动、频率、损耗和散热",
+    "usage": "低边负载、同步整流、半桥和电源开关。",
+    "caution": "高边使用通常需要自举或隔离驱动。",
+    "faults": "把阈值当导通条件、D/S 认错、栅极悬空或死区不足。",
+    "related": [
+      "mosfet",
+      "pmos"
+    ]
+  },
+  "npn-transistor": {
+    "summary": "基极相对发射极正向驱动时导通的 NPN 双极型晶体管。",
+    "principle": "基极注入载流子，使集电极到发射极形成受控电流。",
+    "params": "VCEO、IC、hFE、VCE(sat)、基极电流、功耗、频率和 SOA。",
+    "selection": "负载、耐压、强迫 β、速度、封装和散热",
+    "usage": "低边开关、小信号放大、恒流源和电平转换。",
+    "caution": "基极必须限流，感性负载需续流保护。",
+    "faults": "E/C 反接、基流不足、GPIO 过流或没有续流二极管。",
+    "related": [
+      "bjt",
+      "pnp-transistor"
+    ]
+  },
+  "ntc": {
+    "summary": "阻值随温度升高而下降的热敏电阻，可用于测温和浪涌抑制。",
+    "principle": "半导体陶瓷载流子浓度随温度增加，电阻呈非线性下降。",
+    "params": "25°C 阻值、B 值、容差、耗散系数、热时间常数和功率。",
+    "selection": "测温或功率用途、阻值、B 值、尺寸、自热和响应",
+    "usage": "温度采样、充电补偿和电源输入浪涌限制。",
+    "caution": "测温电流会自热；浪涌型热态时不能保护快速重启。",
+    "faults": "跨大温区线性换算、忽略自热、用途混淆或热接触差。",
+    "related": [
+      "ptc",
+      "temperature-sensor"
+    ]
+  },
+  "oled-module": {
+    "summary": "自发光 OLED 显示模块，对比度高且无需背光，常用 I²C 或 SPI 接口。",
+    "principle": "有机发光层在电流作用下发光，控制器从显存数据驱动像素矩阵。",
+    "params": "分辨率、控制器、接口、供电、逻辑电平、亮度、功耗和寿命。",
+    "selection": "尺寸、像素、颜色、接口、视角、功耗和工作温度",
+    "usage": "便携设备、仪表菜单、图标和小型图形显示。",
+    "caution": "静态高亮画面会老化或烧屏；模块电源和初始化命令必须匹配。",
+    "faults": "I²C 地址错误、控制器型号不符、供电次序错、字库越界或屏幕残影。",
+    "related": [
+      "lcd1602",
+      "seven-segment"
+    ],
+    "publisher": "Solomon Systech",
+    "url": "https://www.solomon-systech.com/en/product/SSD1306"
+  }
+}

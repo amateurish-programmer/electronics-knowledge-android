@@ -1,0 +1,71 @@
+{
+  "logic-gate": {
+    "summary": "按布尔关系处理数字输入，是组合逻辑的基本单元。",
+    "principle": "晶体管网络把输入电平映射为与、或、非、异或等输出。",
+    "params": "逻辑功能、供电、阈值、延迟、驱动、扇出、功耗和容限。",
+    "selection": "逻辑系列、电平、速度、负载和施密特需求",
+    "usage": "信号组合、使能、译码、极性变换和状态判断。",
+    "caution": "未用 CMOS 输入不能悬空，不同系列阈值不可想当然兼容。",
+    "faults": "真值表错误、输入悬空、扇出超限或电平不兼容。",
+    "related": [
+      "74hc00",
+      "flip-flop"
+    ]
+  },
+  "max232": {
+    "summary": "把 TTL/CMOS 串口转换为 RS-232 极性和电压幅度。",
+    "principle": "内部电荷泵产生正负电压，驱动器和接收器完成反相电平转换。",
+    "params": "供电、速率、通道、外部电容、接收阈值、ESD 和封装。",
+    "selection": "通道数、速率、供电、电容和温度",
+    "usage": "MCU UART 与 DB9 或传统 RS-232 设备连接。",
+    "caution": "RS-232 与 TTL 的极性和幅度不同，不可直接相连。",
+    "faults": "电荷泵电容接错、TX/RX 混淆或误用于 RS-485。",
+    "related": [
+      "uart-transceiver",
+      "ch340"
+    ],
+    "publisher": "Texas Instruments",
+    "url": "https://www.ti.com/product/MAX232"
+  },
+  "max485": {
+    "summary": "低功耗半双工 RS-485/RS-422 收发器，在 TTL 与差分总线间转换。",
+    "principle": "驱动器把 DI 转为 A/B 差分，接收器恢复 RO，DE/RE 控制方向。",
+    "params": "供电、速率、共模、单位负载、驱动、延迟和故障保护。",
+    "selection": "节点数、线长、速率、逻辑电压和保护",
+    "usage": "工业仪表、Modbus RTU 和多点半双工总线。",
+    "caution": "经典型号通常为 5 V，需系统设计方向、终端、偏置和接地。",
+    "faults": "A/B 命名差异、DE 时序错、终端过多或总线空闲漂移。",
+    "related": [
+      "rs485-transceiver",
+      "tja1050"
+    ],
+    "publisher": "Analog Devices",
+    "url": "https://www.analog.com/en/products/max485.html"
+  },
+  "mcu": {
+    "summary": "把 CPU、存储和外设集成在单芯片中，用于实时嵌入式控制。",
+    "principle": "处理器执行固件，通过中断、总线和寄存器协调片上外设。",
+    "params": "内核、主频、Flash/RAM、外设、引脚、功耗、电压和温度。",
+    "selection": "实时性、资源、接口、低功耗、封装、供货和生态",
+    "usage": "传感采集、电机控制、仪表、家电和工业设备。",
+    "caution": "电源、复位、时钟、启动脚、调试口和去耦必须按手册设计。",
+    "faults": "资源不足、复用冲突、中断阻塞、看门狗误用或电源完整性差。",
+    "related": [
+      "stm32f103",
+      "atmega328p"
+    ]
+  },
+  "mosfet": {
+    "summary": "以栅源电压控制漏极电流，广泛用于放大和高效开关。",
+    "principle": "栅极电场调制沟道；稳态栅流很小但切换要充放栅电荷。",
+    "params": "VDS、ID、RDS(on)、VGS(th)、栅电荷、SOA、体二极管和热阻。",
+    "selection": "母线电压、负载、驱动电压、频率、损耗和散热",
+    "usage": "电源变换、负载开关、电机驱动和模拟开关。",
+    "caution": "VGS(th) 不是充分导通电压，栅极怕静电且不能悬空。",
+    "faults": "栅压不足、米勒误导通、雪崩超限、寄生振荡或过热。",
+    "related": [
+      "nmos",
+      "pmos"
+    ]
+  }
+}

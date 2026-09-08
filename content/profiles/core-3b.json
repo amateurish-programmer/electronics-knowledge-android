@@ -1,0 +1,77 @@
+{
+  "lm35": {
+    "summary": "输出电压与摄氏温度近似线性比例的模拟温度传感器。",
+    "principle": "片上温敏结和放大电路产生校准后的温度比例电压，典型为 10 mV/°C。",
+    "params": "供电、温度范围、精度、输出比例、静态电流、负载和响应。",
+    "selection": "量程、精度、线长、ADC 分辨率和封装热响应",
+    "usage": "配合 ADC 采集板级、环境和设备温度。",
+    "caution": "长线或容性负载可能不稳，低温测量需核对输出范围。",
+    "faults": "mV/V 换算错、ADC 参考误差、引脚错、自热或热接触差。",
+    "related": [
+      "temperature-sensor",
+      "ds18b20"
+    ],
+    "publisher": "Texas Instruments",
+    "url": "https://www.ti.com/product/LM35"
+  },
+  "lm358": {
+    "summary": "双路低功耗运放，可单电源工作且输入共模范围包含地附近。",
+    "principle": "差分放大器在负反馈下使两输入接近，实现设定闭环增益。",
+    "params": "供电、输入共模、输出摆幅、失调、带宽、压摆率和噪声。",
+    "selection": "输入输出范围、精度、带宽、负载和功耗",
+    "usage": "低频传感放大、滤波、缓冲和信号调理。",
+    "caution": "输出不能到正电源轨，也不是轨到轨器件。",
+    "faults": "输入越界、期望轨到轨、当高速比较器或忽略去耦。",
+    "related": [
+      "op-amp",
+      "lm393"
+    ],
+    "publisher": "Texas Instruments",
+    "url": "https://www.ti.com/product/LM358"
+  },
+  "lm386": {
+    "summary": "低电压音频功率放大器，用少量外围驱动小扬声器。",
+    "principle": "电压增益级和推挽输出级放大音频，外部元件可调增益。",
+    "params": "供电、静态电流、输出功率、负载、增益、失真和散热。",
+    "selection": "扬声器阻抗、功率、电池电压、失真和封装",
+    "usage": "收音机、提示音和小型语音设备的扬声器驱动。",
+    "caution": "电源与旁路要去耦，输入输出走线分开防自激。",
+    "faults": "地回路啸叫、耦合电容过小、增益过高或负载不匹配。",
+    "related": [
+      "speaker",
+      "op-amp"
+    ],
+    "publisher": "Texas Instruments",
+    "url": "https://www.ti.com/product/LM386"
+  },
+  "lm393": {
+    "summary": "双路开集电极输出比较器，适合单电源阈值检测。",
+    "principle": "差分级比较输入，输出晶体管导通拉低，截止时靠外部上拉。",
+    "params": "供电、输入共模、失调、响应时间、灌电流和上拉电压。",
+    "selection": "阈值精度、速度、输入范围、上拉和通道数",
+    "usage": "过零、过压欠压、振荡器和传感器整形。",
+    "caution": "输出必须上拉，输入输出均不能默认轨到轨。",
+    "faults": "漏接上拉、输入越界、迟滞方向错或把输出当推挽。",
+    "related": [
+      "comparator",
+      "lm358"
+    ],
+    "publisher": "Texas Instruments",
+    "url": "https://www.ti.com/product/LM393"
+  },
+  "lm7805": {
+    "summary": "经典三端固定 5 V 线性稳压器，适合中等电流传统电源。",
+    "principle": "基准和误差放大器调节串联管，并带限流及过热保护。",
+    "params": "输入范围、精度、压差、电流、静态电流、热阻和电容。",
+    "selection": "最低输入、负载、压差损耗、散热和封装",
+    "usage": "5 V 控制和模拟电路稳压。",
+    "caution": "不是低压差器件，高输入大电流会产生显著热量。",
+    "faults": "输入不足、热保护反复、引脚混淆或反向电流损坏。",
+    "related": [
+      "ldo",
+      "ams1117"
+    ],
+    "publisher": "Texas Instruments",
+    "url": "https://www.ti.com/product/LM7805"
+  }
+}

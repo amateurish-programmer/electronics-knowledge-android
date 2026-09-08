@@ -1,0 +1,71 @@
+{
+  "temperature-sensor": {
+    "summary": "把温度转换为电阻、电压、电流或数字数据，用于监测和补偿。",
+    "principle": "利用半导体结、热敏材料或热电效应随温度变化的可测特性。",
+    "params": "量程、精度、分辨率、响应时间、漂移、封装、接口和自热。",
+    "selection": "温区、精度、响应、安装、线长、校准和接口",
+    "usage": "环境、器件、液体和表面温度测量。",
+    "caution": "测到的是传感器自身温度，热耦合和响应滞后必须考虑。",
+    "faults": "安装位置不当、自热、导线热传导、未校准或单位换算错误。",
+    "related": [
+      "ds18b20",
+      "lm35"
+    ]
+  },
+  "terminal-block": {
+    "summary": "以螺钉、弹簧或插拔结构固定导线，提供可靠现场接线。",
+    "principle": "机械夹紧产生接触压力，金属导体在规定电流下维持低接触电阻。",
+    "params": "间距、极数、线径、电流电压、扭矩、阻燃、温度和认证。",
+    "selection": "线径、电流、电压、维护方式、间距和安装",
+    "usage": "电源、继电器、传感器和工业控制柜现场接线。",
+    "caution": "按规定剥线和扭矩操作，多股线通常配冷压端头。",
+    "faults": "螺钉松动发热、线径不匹配、压到绝缘层、爬电不足或端子编号错误。",
+    "related": [
+      "connector",
+      "fuse"
+    ]
+  },
+  "thermocouple": {
+    "summary": "两种不同金属接点产生与温差相关的微小热电势，可测宽温区。",
+    "principle": "塞贝克效应使测量端与参考端温差产生电压，需冷端补偿得到温度。",
+    "params": "分度号、温区、灵敏度、精度、冷端补偿、线材和响应。",
+    "selection": "温度范围、气氛、精度、探头结构、补偿线和采集前端",
+    "usage": "炉温、排气、工业设备和高温表面测量。",
+    "caution": "必须使用匹配分度号的补偿导线和正确极性，并处理冷端温度。",
+    "faults": "极性反、补偿线错、冷端补偿缺失、接地回路或查表类型错误。",
+    "related": [
+      "temperature-sensor",
+      "op-amp"
+    ]
+  },
+  "tja1050": {
+    "summary": "面向高速 CAN 的 5 V 收发器，在控制器与差分总线间提供物理层接口。",
+    "principle": "TXD 控制 CANH/CANL 显性与隐性状态，接收器从差分电压产生 RXD。",
+    "params": "供电、最高速率、共模、输出驱动、待机行为、延迟、ESD 和温度。",
+    "selection": "CAN 速率、5 V 供电、控制器电平、EMC 和温度",
+    "usage": "汽车与工业高速 CAN 节点。",
+    "caution": "RXD/TXD 与低压 MCU 的兼容性需核对，总线两端应正确终端。",
+    "faults": "3.3 V 电平兼容误判、终端错误、CANH/L 接反或芯片无待机能力却按新版使用。",
+    "related": [
+      "can-transceiver",
+      "max485"
+    ],
+    "publisher": "NXP",
+    "url": "https://www.nxp.com/products/interfaces/can-transceivers/legacy-can/high-speed-can-transceiver:TJA1050"
+  },
+  "tl431": {
+    "summary": "可调精密并联稳压器，内部含约 2.5 V 基准和高增益控制晶体管。",
+    "principle": "当 REF 电压超过内部基准时增加阴极电流，通过外部分压稳定设定电压。",
+    "params": "基准精度、阴极电压电流、最小工作电流、动态阻抗、稳定区和温漂。",
+    "selection": "输出电压、阴极电流、精度、补偿、封装和温度",
+    "usage": "开关电源光耦反馈、精密钳位和可调参考。",
+    "caution": "不是普通齐纳管；必须满足最小阴极电流并检查负载电容稳定性。",
+    "faults": "A/K/REF 引脚认错、电流不足失调、环路振荡或分压计算忽略基准电流。",
+    "related": [
+      "voltage-reference",
+      "optocoupler"
+    ],
+    "publisher": "Texas Instruments",
+    "url": "https://www.ti.com/product/TL431"
+  }
+}
