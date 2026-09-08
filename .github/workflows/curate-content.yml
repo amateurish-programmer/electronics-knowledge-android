@@ -1,0 +1,39 @@
+name: Curate content
+on:
+  push:
+    branches: ["feat/android-knowledge-v1"]
+    paths:
+      - "content/profiles/**"
+      - "content/tools/apply-profiles.mjs"
+      - ".github/workflows/curate-content.yml"
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/android-knowledge-v1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node content/tools/apply-profiles.mjs
+      - run: npm test
+      - run: npm run content:validate
+      - name: Commit generated Markdown
+        shell: bash
+        run: |
+          if git diff --quiet -- content/entries; then
+            echo "No generated changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/entries
+          git commit -m "feat(content): apply curated catalog profiles" -m "| Area | Change |
+          |---|---|
+          | content/entries/ | Rewrite 100 Markdown entries with component-specific reviewed profiles |
+
+          Author: Prabhukumar Sivamorthy"
+          git push origin HEAD:feat/android-knowledge-v1
