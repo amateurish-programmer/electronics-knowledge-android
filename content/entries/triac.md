@@ -12,7 +12,7 @@ imageAlt: 双向晶闸管分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: scr|solid-state-relay
-sourceTitle: 双向晶闸管官方技术资料
+sourceTitle: 双向晶闸管参考资料
 sourcePublisher: Nexperia
 sourceUrl: https://www.nexperia.com/products
 sourceAccessedAt: 2026-09-07

@@ -12,7 +12,7 @@ imageAlt: 接线端子分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: connector|fuse
-sourceTitle: 接线端子官方技术资料
+sourceTitle: 接线端子参考资料
 sourcePublisher: Omron
 sourceUrl: https://components.omron.com/
 sourceAccessedAt: 2026-09-07

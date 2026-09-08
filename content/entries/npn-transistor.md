@@ -12,7 +12,7 @@ imageAlt: NPN三极管分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: bjt|pnp-transistor
-sourceTitle: NPN三极管官方技术资料
+sourceTitle: NPN三极管参考资料
 sourcePublisher: Nexperia
 sourceUrl: https://www.nexperia.com/products
 sourceAccessedAt: 2026-09-07

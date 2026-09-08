@@ -12,7 +12,7 @@ imageAlt: CAN收发器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: tja1050|rs485-transceiver
-sourceTitle: CAN收发器官方技术资料
+sourceTitle: CAN收发器参考资料
 sourcePublisher: Texas Instruments
 sourceUrl: https://www.ti.com/interface/overview.html
 sourceAccessedAt: 2026-09-07

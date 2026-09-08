@@ -12,7 +12,7 @@ imageAlt: 隔离数字输入分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: optocoupler|tvs-diode
-sourceTitle: 隔离数字输入官方技术资料
+sourceTitle: 隔离数字输入参考资料
 sourcePublisher: Texas Instruments
 sourceUrl: https://www.ti.com/interface/overview.html
 sourceAccessedAt: 2026-09-07

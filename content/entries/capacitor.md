@@ -12,7 +12,7 @@ imageAlt: 电容器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: ceramic-capacitor|electrolytic-capacitor
-sourceTitle: 电容器官方技术资料
+sourceTitle: 电容器参考资料
 sourcePublisher: Vishay
 sourceUrl: https://www.vishay.com/en/passives/
 sourceAccessedAt: 2026-09-07

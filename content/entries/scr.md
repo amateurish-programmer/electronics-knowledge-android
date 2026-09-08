@@ -12,7 +12,7 @@ imageAlt: 晶闸管分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: triac|igbt
-sourceTitle: 晶闸管官方技术资料
+sourceTitle: 晶闸管参考资料
 sourcePublisher: Nexperia
 sourceUrl: https://www.nexperia.com/products
 sourceAccessedAt: 2026-09-07

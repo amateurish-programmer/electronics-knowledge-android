@@ -12,7 +12,7 @@ imageAlt: NTC热敏电阻分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: ptc|temperature-sensor
-sourceTitle: NTC热敏电阻官方技术资料
+sourceTitle: NTC热敏电阻参考资料
 sourcePublisher: Vishay
 sourceUrl: https://www.vishay.com/en/passives/
 sourceAccessedAt: 2026-09-07

@@ -12,7 +12,7 @@ imageAlt: 升压型DC-DC分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: buck-converter|inductor
-sourceTitle: 升压型DC-DC官方技术资料
+sourceTitle: 升压型DC-DC参考资料
 sourcePublisher: Texas Instruments
 sourceUrl: https://www.ti.com/power-management/overview.html
 sourceAccessedAt: 2026-09-07

@@ -12,7 +12,7 @@ imageAlt: 电压基准分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: adc|tl431
-sourceTitle: 电压基准官方技术资料
+sourceTitle: 电压基准参考资料
 sourcePublisher: Texas Instruments
 sourceUrl: https://www.ti.com/power-management/overview.html
 sourceAccessedAt: 2026-09-07

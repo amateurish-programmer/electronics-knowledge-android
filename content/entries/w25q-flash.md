@@ -12,7 +12,7 @@ imageAlt: W25Q串行Flash分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: 24c02|sram
-sourceTitle: W25Q串行Flash官方技术资料
+sourceTitle: W25Q串行Flash参考资料
 sourcePublisher: Winbond
 sourceUrl: https://www.winbond.com/hq/product/code-storage-flash-memory/serial-nor-flash/
 sourceAccessedAt: 2026-09-07

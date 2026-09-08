@@ -12,7 +12,7 @@ imageAlt: 温度传感器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: ds18b20|lm35
-sourceTitle: 温度传感器官方技术资料
+sourceTitle: 温度传感器参考资料
 sourcePublisher: Analog Devices
 sourceUrl: https://www.analog.com/en/product-category/sensors.html
 sourceAccessedAt: 2026-09-07

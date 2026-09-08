@@ -12,7 +12,7 @@ imageAlt: 变压器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: bridge-rectifier|inductor
-sourceTitle: 变压器官方技术资料
+sourceTitle: 变压器参考资料
 sourcePublisher: Vishay
 sourceUrl: https://www.vishay.com/en/passives/
 sourceAccessedAt: 2026-09-07

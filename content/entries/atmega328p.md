@@ -12,7 +12,7 @@ imageAlt: ATmega328P微控制器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: mcu|stm32f103
-sourceTitle: ATmega328P微控制器官方技术资料
+sourceTitle: ATmega328P微控制器参考资料
 sourcePublisher: Microchip
 sourceUrl: https://www.microchip.com/en-us/product/ATmega328P
 sourceAccessedAt: 2026-09-07

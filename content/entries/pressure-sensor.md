@@ -12,7 +12,7 @@ imageAlt: 压力传感器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: humidity-sensor|temperature-sensor
-sourceTitle: 压力传感器官方技术资料
+sourceTitle: 压力传感器参考资料
 sourcePublisher: Analog Devices
 sourceUrl: https://www.analog.com/en/product-category/sensors.html
 sourceAccessedAt: 2026-09-07

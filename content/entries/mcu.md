@@ -12,7 +12,7 @@ imageAlt: 微控制器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: stm32f103|atmega328p
-sourceTitle: 微控制器官方技术资料
+sourceTitle: 微控制器参考资料
 sourcePublisher: STMicroelectronics
 sourceUrl: https://www.st.com/en/microcontrollers-microprocessors.html
 sourceAccessedAt: 2026-09-07

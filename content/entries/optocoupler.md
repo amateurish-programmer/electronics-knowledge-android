@@ -12,7 +12,7 @@ imageAlt: 光耦合器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: isolated-digital-input|photodiode
-sourceTitle: 光耦合器官方技术资料
+sourceTitle: 光耦合器参考资料
 sourcePublisher: Texas Instruments
 sourceUrl: https://www.ti.com/interface/overview.html
 sourceAccessedAt: 2026-09-07

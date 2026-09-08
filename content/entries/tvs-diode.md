@@ -12,7 +12,7 @@ imageAlt: TVS二极管分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: zener-diode|varistor
-sourceTitle: TVS二极管官方技术资料
+sourceTitle: TVS二极管参考资料
 sourcePublisher: Littelfuse
 sourceUrl: https://www.littelfuse.com/products
 sourceAccessedAt: 2026-09-07

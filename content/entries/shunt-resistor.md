@@ -12,7 +12,7 @@ imageAlt: 分流电阻分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: current-sense-amplifier|current-transformer
-sourceTitle: 分流电阻官方技术资料
+sourceTitle: 分流电阻参考资料
 sourcePublisher: Analog Devices
 sourceUrl: https://www.analog.com/en/product-category/sensors.html
 sourceAccessedAt: 2026-09-07

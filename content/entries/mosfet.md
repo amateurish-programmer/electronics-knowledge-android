@@ -12,7 +12,7 @@ imageAlt: MOS场效应管分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: nmos|pmos
-sourceTitle: MOS场效应管官方技术资料
+sourceTitle: MOS场效应管参考资料
 sourcePublisher: Nexperia
 sourceUrl: https://www.nexperia.com/products
 sourceAccessedAt: 2026-09-07

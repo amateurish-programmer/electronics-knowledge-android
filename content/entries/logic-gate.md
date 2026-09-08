@@ -12,7 +12,7 @@ imageAlt: 逻辑门分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: 74hc00|flip-flop
-sourceTitle: 逻辑门官方技术资料
+sourceTitle: 逻辑门参考资料
 sourcePublisher: Texas Instruments
 sourceUrl: https://www.ti.com/logic-voltage-translation/overview.html
 sourceAccessedAt: 2026-09-07

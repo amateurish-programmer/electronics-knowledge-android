@@ -12,7 +12,7 @@ imageAlt: 石英晶体分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: resonator|ds3231
-sourceTitle: 石英晶体官方技术资料
+sourceTitle: 石英晶体参考资料
 sourcePublisher: Vishay
 sourceUrl: https://www.vishay.com/en/passives/
 sourceAccessedAt: 2026-09-07

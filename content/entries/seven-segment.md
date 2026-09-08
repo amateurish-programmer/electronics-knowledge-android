@@ -12,7 +12,7 @@ imageAlt: 七段数码管分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: led|74hc595
-sourceTitle: 七段数码管官方技术资料
+sourceTitle: 七段数码管参考资料
 sourcePublisher: Vishay
 sourceUrl: https://www.vishay.com/en/optical-sensors/
 sourceAccessedAt: 2026-09-07

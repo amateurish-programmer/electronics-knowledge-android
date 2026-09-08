@@ -12,7 +12,7 @@ imageAlt: 整流桥分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: rectifier-diode|transformer
-sourceTitle: 整流桥官方技术资料
+sourceTitle: 整流桥参考资料
 sourcePublisher: Littelfuse
 sourceUrl: https://www.littelfuse.com/products
 sourceAccessedAt: 2026-09-07

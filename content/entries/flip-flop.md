@@ -12,7 +12,7 @@ imageAlt: 触发器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: counter|logic-gate
-sourceTitle: 触发器官方技术资料
+sourceTitle: 触发器参考资料
 sourcePublisher: Texas Instruments
 sourceUrl: https://www.ti.com/logic-voltage-translation/overview.html
 sourceAccessedAt: 2026-09-07

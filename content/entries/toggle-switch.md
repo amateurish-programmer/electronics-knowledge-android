@@ -12,7 +12,7 @@ imageAlt: 拨动开关分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: push-button|connector
-sourceTitle: 拨动开关官方技术资料
+sourceTitle: 拨动开关参考资料
 sourcePublisher: Omron
 sourceUrl: https://components.omron.com/
 sourceAccessedAt: 2026-09-07

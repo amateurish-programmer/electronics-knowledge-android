@@ -12,7 +12,7 @@ imageAlt: ESP32无线微控制器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: mcu|atmega328p
-sourceTitle: ESP32无线微控制器官方技术资料
+sourceTitle: ESP32无线微控制器参考资料
 sourcePublisher: Espressif
 sourceUrl: https://www.espressif.com/en/products/socs/esp32
 sourceAccessedAt: 2026-09-07

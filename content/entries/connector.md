@@ -12,7 +12,7 @@ imageAlt: 连接器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: terminal-block|toggle-switch
-sourceTitle: 连接器官方技术资料
+sourceTitle: 连接器参考资料
 sourcePublisher: Omron
 sourceUrl: https://components.omron.com/
 sourceAccessedAt: 2026-09-07

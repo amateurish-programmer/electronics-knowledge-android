@@ -12,7 +12,7 @@ imageAlt: MEMS加速度计分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: hall-sensor|rotary-encoder
-sourceTitle: MEMS加速度计官方技术资料
+sourceTitle: MEMS加速度计参考资料
 sourcePublisher: Analog Devices
 sourceUrl: https://www.analog.com/en/product-category/sensors.html
 sourceAccessedAt: 2026-09-07

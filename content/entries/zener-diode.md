@@ -12,7 +12,7 @@ imageAlt: 稳压二极管分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: tvs-diode|voltage-reference
-sourceTitle: 稳压二极管官方技术资料
+sourceTitle: 稳压二极管参考资料
 sourcePublisher: Nexperia
 sourceUrl: https://www.nexperia.com/products
 sourceAccessedAt: 2026-09-07

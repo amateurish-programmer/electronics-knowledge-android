@@ -12,7 +12,7 @@ imageAlt: 共模电感分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: inductor|capacitor
-sourceTitle: 共模电感官方技术资料
+sourceTitle: 共模电感参考资料
 sourcePublisher: Vishay
 sourceUrl: https://www.vishay.com/en/passives/
 sourceAccessedAt: 2026-09-07

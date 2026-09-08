@@ -12,7 +12,7 @@ imageAlt: P沟道MOSFET分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: mosfet|nmos
-sourceTitle: P沟道MOSFET官方技术资料
+sourceTitle: P沟道MOSFET参考资料
 sourcePublisher: Nexperia
 sourceUrl: https://www.nexperia.com/products
 sourceAccessedAt: 2026-09-07

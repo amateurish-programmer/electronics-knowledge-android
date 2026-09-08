@@ -12,7 +12,7 @@ imageAlt: 熔断器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: ptc|varistor
-sourceTitle: 熔断器官方技术资料
+sourceTitle: 熔断器参考资料
 sourcePublisher: Littelfuse
 sourceUrl: https://www.littelfuse.com/products
 sourceAccessedAt: 2026-09-07

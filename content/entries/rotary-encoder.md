@@ -12,7 +12,7 @@ imageAlt: 旋转编码器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: push-button|hall-sensor
-sourceTitle: 旋转编码器官方技术资料
+sourceTitle: 旋转编码器参考资料
 sourcePublisher: Omron
 sourceUrl: https://components.omron.com/
 sourceAccessedAt: 2026-09-07

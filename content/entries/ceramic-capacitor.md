@@ -12,7 +12,7 @@ imageAlt: 陶瓷电容分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
 relatedIds: capacitor|tantalum-capacitor
-sourceTitle: 陶瓷电容官方技术资料
+sourceTitle: 陶瓷电容参考资料
 sourcePublisher: Vishay
 sourceUrl: https://www.vishay.com/en/passives/
 sourceAccessedAt: 2026-09-07
