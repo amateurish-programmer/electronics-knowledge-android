@@ -5,29 +5,35 @@ title: 模数转换器
 englishName: Analog-to-Digital Converter
 aliases: Analog-to-Digital Converter|adc
 categoryId: analog-power
-summary: 模数转换器常用于信号调理、电源变换和精密测量。
-keywords: 信号调理|电源变换和精密测量
+summary: 把连续模拟量映射为数字码，是传感和测量链路的核心。
+keywords: 电压电流采样|传感采集和数据记录|前端需抗混叠滤波
 image: images/analog-power.svg
 imageAlt: 模数转换器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
-relatedIds:
-sourceTitle: 模数转换器技术资料
+relatedIds: dac|voltage-reference
+sourceTitle: 模数转换器官方技术资料
 sourcePublisher: Texas Instruments
 sourceUrl: https://www.ti.com/power-management/overview.html
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介
-模数转换器用于信号调理、电源变换和精密测量，设计前应明确接口、供电和负载条件。
+把连续模拟量映射为数字码，是传感和测量链路的核心。
+
 ## 工作原理
-内部模拟或数字电路按输入状态产生受控输出。分析时先看静态边界，再核对动态和时序条件。
+采样保持取得输入，量化器按参考电压与分辨率划分码阶。
+
 ## 关键参数
-重点核对供电、输入输出范围、精度、带宽、噪声、效率和热阻，以具体厂家完整型号的数据手册为准。
+分辨率、采样率、输入范围、参考源、INL/DNL、ENOB 和带宽。
+
 ## 选型要点
-从实际边界反推规格，为温升、噪声、浪涌、老化和批次差异留余量。
+选型时结合信号带宽、动态范围、允许误差、通道数和延迟，并以具体型号、封装和温度条件下的官方数据手册为准。
+
 ## 典型用法
-典型用于信号调理、电源变换和精密测量，外围需同时检查偏置、去耦、保护和测试点。
+电压电流采样、传感采集和数据记录，前端需抗混叠滤波。
+
 ## 注意事项
-输入不得悬空或越过电源轨，电源回路与地线布局应符合数据手册建议。
+输入不可越界；参考噪声、源阻抗和采样时间直接影响结果。
+
 ## 常见故障与误区
-常见问题是忽略完整后缀、上电状态、接口时序、稳定条件或散热要求。
+只看标称位数、忽略参考精度、建立不足或采样率过低。

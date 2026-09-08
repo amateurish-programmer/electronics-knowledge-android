@@ -5,29 +5,35 @@ title: 触发器
 englishName: Flip-Flop
 aliases: Flip-Flop|flip-flop
 categoryId: digital-control
-summary: 触发器常用于逻辑控制、存储和时序处理。
-keywords: 逻辑控制|存储和时序处理
+summary: 触发器保存一位数字状态，是寄存器、计数器和状态机的基础。
+keywords: 数据寄存|同步|分频|计数和状态保存
 image: images/digital-control.svg
 imageAlt: 触发器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
-relatedIds:
-sourceTitle: 触发器技术资料
+relatedIds: counter|logic-gate
+sourceTitle: 触发器官方技术资料
 sourcePublisher: Texas Instruments
 sourceUrl: https://www.ti.com/logic-voltage-translation/overview.html
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介
-触发器用于逻辑控制、存储和时序处理，设计前应明确接口、供电和负载条件。
+触发器保存一位数字状态，是寄存器、计数器和状态机的基础。
+
 ## 工作原理
-内部模拟或数字电路按输入状态产生受控输出。分析时先看静态边界，再核对动态和时序条件。
+交叉反馈逻辑形成两个稳定状态，并在时钟或控制条件满足时更新。
+
 ## 关键参数
-重点核对供电与阈值、时钟、容量、接口时序、上电状态和封装，以具体厂家完整型号的数据手册为准。
+类型、触发边沿、建立保持时间、时钟频率、异步置位复位和延迟。
+
 ## 选型要点
-从实际边界反推规格，为温升、噪声、浪涌、老化和批次差异留余量。
+选型时结合功能类型、时序裕量、逻辑电平、复位需求和亚稳态指标，并以具体型号、封装和温度条件下的官方数据手册为准。
+
 ## 典型用法
-典型用于逻辑控制、存储和时序处理，外围需同时检查偏置、去耦、保护和测试点。
+数据寄存、同步、分频、计数和状态保存。
+
 ## 注意事项
-输入不得悬空或越过电源轨，电源回路与地线布局应符合数据手册建议。
+异步输入进入时钟域需同步；建立保持违例可能导致亚稳态。
+
 ## 常见故障与误区
-常见问题是忽略完整后缀、上电状态、接口时序、稳定条件或散热要求。
+时钟与数据时序不足、异步端悬空、复位极性错误或门控时钟产生毛刺。

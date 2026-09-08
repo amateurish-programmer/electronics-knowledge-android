@@ -5,29 +5,35 @@ title: 静态随机存储器
 englishName: SRAM
 aliases: SRAM|sram
 categoryId: digital-control
-summary: 静态随机存储器常用于逻辑控制、存储和时序处理。
-keywords: 逻辑控制|存储和时序处理
+summary: 静态随机存储器以双稳态单元保存数据，掉电后内容丢失。
+keywords: 高速缓存|帧缓冲|采集缓存和 MCU 外扩 RAM
 image: images/digital-control.svg
 imageAlt: 静态随机存储器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
-relatedIds:
-sourceTitle: 静态随机存储器技术资料
+relatedIds: w25q-flash|24c02
+sourceTitle: 静态随机存储器官方技术资料
 sourcePublisher: Texas Instruments
 sourceUrl: https://www.ti.com/logic-voltage-translation/overview.html
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介
-静态随机存储器用于逻辑控制、存储和时序处理，设计前应明确接口、供电和负载条件。
+静态随机存储器以双稳态单元保存数据，掉电后内容丢失。
+
 ## 工作原理
-内部模拟或数字电路按输入状态产生受控输出。分析时先看静态边界，再核对动态和时序条件。
+交叉耦合晶体管形成锁存单元，只要供电存在就无需刷新。
+
 ## 关键参数
-重点核对供电与阈值、时钟、容量、接口时序、上电状态和封装，以具体厂家完整型号的数据手册为准。
+容量、组织、供电、访问时间、待机电流、接口时序和封装。
+
 ## 选型要点
-从实际边界反推规格，为温升、噪声、浪涌、老化和批次差异留余量。
+选型时结合容量、总线宽度、速度、功耗、电平和数据保持，并以具体型号、封装和温度条件下的官方数据手册为准。
+
 ## 典型用法
-典型用于逻辑控制、存储和时序处理，外围需同时检查偏置、去耦、保护和测试点。
+高速缓存、帧缓冲、采集缓存和 MCU 外扩 RAM。
+
 ## 注意事项
-输入不得悬空或越过电源轨，电源回路与地线布局应符合数据手册建议。
+地址、数据和控制线必须满足时序，备用电池保持需评估漏电。
+
 ## 常见故障与误区
-常见问题是忽略完整后缀、上电状态、接口时序、稳定条件或散热要求。
+读写使能冲突、总线争用、地址线错位、上电未初始化或越界访问。

@@ -5,29 +5,35 @@ title: 电容器
 englishName: Capacitor
 aliases: Capacitor|capacitor
 categoryId: passive
-summary: 电容器常用于储能、滤波、偏置和时钟网络。
-keywords: 储能|滤波|偏置和时钟网络
+summary: 以电场储能，阻隔稳态直流并对变化电压产生充放电电流。
+keywords: 电源去耦|滤波|储能|交流耦合|定时和谐振
 image: images/passive.svg
 imageAlt: 电容器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
-relatedIds:
-sourceTitle: 电容器技术资料
+relatedIds: ceramic-capacitor|electrolytic-capacitor
+sourceTitle: 电容器官方技术资料
 sourcePublisher: Vishay
 sourceUrl: https://www.vishay.com/en/passives/
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介
-电容器是常见电子元器件，主要用于储能、滤波、偏置和时钟网络。使用前应识别封装、引脚和能量或信号方向。
+以电场储能，阻隔稳态直流并对变化电压产生充放电电流。
+
 ## 工作原理
-器件通过材料结构把输入条件转换为预期电气响应。分析时先确认静态工作点，再检查动态过程。
+满足 Q=C·V 和 i=C·dv/dt，实际器件还存在 ESR、ESL 与漏电。
+
 ## 关键参数
-重点核对阻抗、精度、功率、温漂和频率特性，数值以完整型号、封装和温度条件下的数据手册为准。
+容量、耐压、容差、温度、ESR、纹波、漏电和自谐振频率。
+
 ## 选型要点
-从实际电压、电流、频率和环境反推规格，为温升、浪涌和批次差异留出余量。
+选型时结合电压、频率、纹波、温度、寿命、尺寸和介质，并以具体型号、封装和温度条件下的官方数据手册为准。
+
 ## 典型用法
-典型场景包括储能、滤波、偏置和时钟网络，原理图还要检查外围、保护、回流路径和测试点。
+电源去耦、滤波、储能、交流耦合、定时和谐振。
+
 ## 注意事项
-不得用典型值代替保证值；超出绝对最大额定值可能造成永久损坏。
+有极性电容不得反接；不同介质需分别考虑降容和寿命。
+
 ## 常见故障与误区
-常见问题是引脚或极性识别错误、忽略额定条件、外围参数照搬和测量方法不当。
+只看标称容量、忽略 ESR/ESL、耐压不足、反接或未放电测量。

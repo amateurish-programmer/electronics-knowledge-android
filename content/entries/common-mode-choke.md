@@ -5,29 +5,35 @@ title: 共模电感
 englishName: Common Mode Choke
 aliases: Common Mode Choke|common-mode-choke
 categoryId: passive
-summary: 共模电感常用于储能、滤波、偏置和时钟网络。
-keywords: 储能|滤波|偏置和时钟网络
+summary: 双绕组磁性器件，用于抑制线上同方向流动的共模高频噪声。
+keywords: 电源入口|USB/CAN/RS-485 等差分线的共模 EMI 滤波
 image: images/passive.svg
 imageAlt: 共模电感分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
-relatedIds:
-sourceTitle: 共模电感技术资料
+relatedIds: inductor|capacitor
+sourceTitle: 共模电感官方技术资料
 sourcePublisher: Vishay
 sourceUrl: https://www.vishay.com/en/passives/
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介
-共模电感是常见电子元器件，主要用于储能、滤波、偏置和时钟网络。使用前应识别封装、引脚和能量或信号方向。
+双绕组磁性器件，用于抑制线上同方向流动的共模高频噪声。
+
 ## 工作原理
-器件通过材料结构把输入条件转换为预期电气响应。分析时先确认静态工作点，再检查动态过程。
+共模电流的磁通相加形成高阻抗，正常差模电流磁通大致抵消。
+
 ## 关键参数
-重点核对阻抗、精度、功率、温漂和频率特性，数值以完整型号、封装和温度条件下的数据手册为准。
+共模阻抗曲线、额定电流、直流电阻、漏感、耐压和温升。
+
 ## 选型要点
-从实际电压、电流、频率和环境反推规格，为温升、浪涌和批次差异留出余量。
+选型时结合噪声频段、线路电流、允许压降、安规和尺寸，并以具体型号、封装和温度条件下的官方数据手册为准。
+
 ## 典型用法
-典型场景包括储能、滤波、偏置和时钟网络，原理图还要检查外围、保护、回流路径和测试点。
+电源入口、USB/CAN/RS-485 等差分线的共模 EMI 滤波。
+
 ## 注意事项
-不得用典型值代替保证值；超出绝对最大额定值可能造成永久损坏。
+器件方向和绕组耦合要正确，不能把差模电感值当共模阻抗。
+
 ## 常见故障与误区
-常见问题是引脚或极性识别错误、忽略额定条件、外围参数照搬和测量方法不当。
+选错频段、饱和发热、绕组接反或寄生电容导致高频旁路。

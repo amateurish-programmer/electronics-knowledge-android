@@ -5,29 +5,35 @@ title: 温度传感器
 englishName: Temperature Sensor
 aliases: Temperature Sensor|temperature-sensor
 categoryId: sensor
-summary: 温度传感器用于温度、磁场和环境测量。
-keywords: 温度|磁场和环境测量
+summary: 把温度转换为电阻、电压、电流或数字数据，用于监测和补偿。
+keywords: 环境|器件|液体和表面温度测量
 image: images/sensor.svg
 imageAlt: 温度传感器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
-relatedIds:
-sourceTitle: 温度传感器技术资料
+relatedIds: ds18b20|lm35
+sourceTitle: 温度传感器官方技术资料
 sourcePublisher: Analog Devices
 sourceUrl: https://www.analog.com/en/product-category/sensors.html
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介
-温度传感器是常见测量器件，主要用于温度、磁场和环境测量。
+把温度转换为电阻、电压、电流或数字数据，用于监测和补偿。
+
 ## 工作原理
-内部电路或敏感结构把输入信号、总线状态或物理量转换为可处理的电信号。
+利用半导体结、热敏材料或热电效应随温度变化的可测特性。
+
 ## 关键参数
-重点核对量程、精度、分辨率、响应时间、温漂、接口和安装条件，并以完整型号、封装和温度条件的数据手册为准。
+量程、精度、分辨率、响应时间、漂移、封装、接口和自热。
+
 ## 选型要点
-结合节点数量、线缆、负载、精度和环境边界选型，预留噪声、温升和浪涌余量。
+选型时结合温区、精度、响应、安装、线长、校准和接口，并以具体型号、封装和温度条件下的官方数据手册为准。
+
 ## 典型用法
-用于温度、磁场和环境测量，设计时检查供电、去耦、终端、保护和诊断测试点。
+环境、器件、液体和表面温度测量。
+
 ## 注意事项
-现场布线和接地会显著影响可靠性；不得忽略共模、ESD、校准和上电状态。
+测到的是传感器自身温度，热耦合和响应滞后必须考虑。
+
 ## 常见故障与误区
-常见问题包括电平不兼容、终端错误、输入悬空、地址冲突、引脚后缀或测量方法不一致。
+安装位置不当、自热、导线热传导、未校准或单位换算错误。

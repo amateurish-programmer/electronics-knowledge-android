@@ -5,29 +5,35 @@ title: MEMS加速度计
 englishName: MEMS Accelerometer
 aliases: MEMS Accelerometer|accelerometer
 categoryId: sensor
-summary: MEMS加速度计用于电流、光、运动、压力和环境测量。
-keywords: 电流|光|运动|压力和环境测量
+summary: 测量一个或多个轴向的比力，用于姿态、振动、运动和冲击检测。
+keywords: 倾角估计|振动监测|跌落检测和运动唤醒|通常需校准
 image: images/sensor.svg
 imageAlt: MEMS加速度计分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
-relatedIds:
-sourceTitle: MEMS加速度计技术资料
+relatedIds: hall-sensor|rotary-encoder
+sourceTitle: MEMS加速度计官方技术资料
 sourcePublisher: Analog Devices
 sourceUrl: https://www.analog.com/en/product-category/sensors.html
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介
-MEMS加速度计是常见电子部件，主要用于电流、光、运动、压力和环境测量。安装前确认方向、接口、机械尺寸和负载性质。
+测量一个或多个轴向的比力，用于姿态、振动、运动和冲击检测。
+
 ## 工作原理
-部件通过电磁、机械、光电、压阻或功率半导体结构实现检测、连接、显示或保护。
+MEMS 质量块受力位移，电容或压阻结构把位移转换为电信号。
+
 ## 关键参数
-重点核对量程、精度、响应、温漂、接口和安装条件，全部数值以具体型号、封装及规定工况下的数据手册为准。
+量程、噪声密度、零偏、灵敏度、带宽、采样率、轴数和温漂。
+
 ## 选型要点
-由实际负载、环境和寿命要求反推规格，对温升、浪涌、机械应力和老化留余量。
+选型时结合最大加速度、带宽、噪声、功耗、接口和安装方向，并以具体型号、封装和温度条件下的官方数据手册为准。
+
 ## 典型用法
-用于电流、光、运动、压力和环境测量，同时检查驱动、限流、吸收、保护、安装固定和测试点。
+倾角估计、振动监测、跌落检测和运动唤醒，通常需校准。
+
 ## 注意事项
-按负载类型降额；感性负载增加吸收，显示声光器件核对限流，保护器件核对故障能量。
+静止时仍测得重力分量；安装应力和温度会引入偏差。
+
 ## 常见故障与误区
-常见问题是额定值按纯阻性负载套用、忽略温升与寿命、接线方向错误或机械安装应力过大。
+把重力当运动加速度、坐标轴弄反、采样混叠或忽略零偏。

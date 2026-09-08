@@ -5,29 +5,35 @@ title: 铝电解电容
 englishName: Aluminum Electrolytic Capacitor
 aliases: Aluminum Electrolytic Capacitor|electrolytic-capacitor
 categoryId: passive
-summary: 铝电解电容常用于储能、滤波、偏置和时钟网络。
-keywords: 储能|滤波|偏置和时钟网络
+summary: 以电解质和氧化膜获得较大容量，常用于低频滤波和能量缓冲。
+keywords: 整流后滤波|母线储能|低频去耦和保持电源
 image: images/passive.svg
 imageAlt: 铝电解电容分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
-relatedIds:
-sourceTitle: 铝电解电容技术资料
+relatedIds: capacitor|tantalum-capacitor
+sourceTitle: 铝电解电容官方技术资料
 sourcePublisher: Vishay
 sourceUrl: https://www.vishay.com/en/passives/
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介
-铝电解电容是常见电子元器件，主要用于储能、滤波、偏置和时钟网络。使用前应识别封装、引脚和能量或信号方向。
+以电解质和氧化膜获得较大容量，常用于低频滤波和能量缓冲。
+
 ## 工作原理
-器件通过材料结构把输入条件转换为预期电气响应。分析时先确认静态工作点，再检查动态过程。
+阳极氧化层充当极薄介质，结构具有极性并伴随 ESR、漏电和寿命老化。
+
 ## 关键参数
-重点核对阻抗、精度、功率、温漂和频率特性，数值以完整型号、封装和温度条件下的数据手册为准。
+容量、耐压、ESR、纹波电流、漏电、寿命、温度和尺寸。
+
 ## 选型要点
-从实际电压、电流、频率和环境反推规格，为温升、浪涌和批次差异留出余量。
+选型时结合纹波频率与电流、温升、寿命、耐压余量和安装空间，并以具体型号、封装和温度条件下的官方数据手册为准。
+
 ## 典型用法
-典型场景包括储能、滤波、偏置和时钟网络，原理图还要检查外围、保护、回流路径和测试点。
+整流后滤波、母线储能、低频去耦和保持电源。
+
 ## 注意事项
-不得用典型值代替保证值；超出绝对最大额定值可能造成永久损坏。
+严禁长期反接，靠近热源会显著缩短寿命；停电后仍可能带电。
+
 ## 常见故障与误区
-常见问题是引脚或极性识别错误、忽略额定条件、外围参数照搬和测量方法不当。
+鼓包漏液、ESR 上升、纹波超限发热、耐压不足或久置后漏电增大。

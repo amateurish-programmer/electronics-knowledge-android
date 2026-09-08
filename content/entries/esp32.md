@@ -5,29 +5,35 @@ title: ESP32无线微控制器
 englishName: ESP32 SoC
 aliases: ESP32 SoC|esp32
 categoryId: digital-control
-summary: ESP32无线微控制器用于实时控制、计时和数据处理。
-keywords: 实时控制|计时和数据处理
+summary: 集成 Wi‑Fi、Bluetooth 和丰富外设的 32 位 SoC，适合联网嵌入式设备。
+keywords: 物联网节点|无线网关|传感采集和人机交互
 image: images/digital-control.svg
 imageAlt: ESP32无线微控制器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
-relatedIds:
-sourceTitle: ESP32无线微控制器技术资料
-sourcePublisher: STMicroelectronics
-sourceUrl: https://www.st.com/en/microcontrollers-microprocessors.html
+relatedIds: mcu|atmega328p
+sourceTitle: ESP32无线微控制器官方技术资料
+sourcePublisher: Espressif
+sourceUrl: https://www.espressif.com/en/products/socs/esp32
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介
-ESP32无线微控制器是常见控制与接口器件，主要用于实时控制、计时和数据处理。
+集成 Wi‑Fi、Bluetooth 和丰富外设的 32 位 SoC，适合联网嵌入式设备。
+
 ## 工作原理
-内部电路或敏感结构把输入信号、总线状态或物理量转换为可处理的电信号。
+双核或单核处理器运行固件，片上射频、存储接口和外设通过系统总线协同。
+
 ## 关键参数
-重点核对供电、时钟、存储、外设、上电状态和封装，并以完整型号、封装和温度条件的数据手册为准。
+具体系列、Flash/PSRAM、GPIO 复用、射频、功耗、供电峰值和安全启动。
+
 ## 选型要点
-结合节点数量、线缆、负载、精度和环境边界选型，预留噪声、温升和浪涌余量。
+选型时结合无线制式、算力、存储、低功耗、天线、温度和认证，并以具体型号、封装和温度条件下的官方数据手册为准。
+
 ## 典型用法
-用于实时控制、计时和数据处理，设计时检查供电、去耦、终端、保护和诊断测试点。
+物联网节点、无线网关、传感采集和人机交互。
+
 ## 注意事项
-现场布线和接地会显著影响可靠性；不得忽略共模、ESD、校准和上电状态。
+3.3 V 电源需承受射频峰值电流，天线净空和射频布局必须按指南。
+
 ## 常见故障与误区
-常见问题包括电平不兼容、终端错误、输入悬空、地址冲突、引脚后缀或测量方法不一致。
+供电压降复位、启动绑带脚冲突、天线被铜遮挡或误用非 5 V 容忍 GPIO。

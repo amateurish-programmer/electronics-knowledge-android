@@ -5,29 +5,35 @@ title: 微控制器
 englishName: Microcontroller
 aliases: Microcontroller|mcu
 categoryId: digital-control
-summary: 微控制器用于实时控制、计时和数据处理。
-keywords: 实时控制|计时和数据处理
+summary: 把 CPU、存储和外设集成在单芯片中，用于实时嵌入式控制。
+keywords: 传感采集|电机控制|仪表|家电和工业设备
 image: images/digital-control.svg
 imageAlt: 微控制器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
-relatedIds:
-sourceTitle: 微控制器技术资料
+relatedIds: stm32f103|atmega328p
+sourceTitle: 微控制器官方技术资料
 sourcePublisher: STMicroelectronics
 sourceUrl: https://www.st.com/en/microcontrollers-microprocessors.html
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介
-微控制器是常见控制与接口器件，主要用于实时控制、计时和数据处理。
+把 CPU、存储和外设集成在单芯片中，用于实时嵌入式控制。
+
 ## 工作原理
-内部电路或敏感结构把输入信号、总线状态或物理量转换为可处理的电信号。
+处理器执行固件，通过中断、总线和寄存器协调片上外设。
+
 ## 关键参数
-重点核对供电、时钟、存储、外设、上电状态和封装，并以完整型号、封装和温度条件的数据手册为准。
+内核、主频、Flash/RAM、外设、引脚、功耗、电压和温度。
+
 ## 选型要点
-结合节点数量、线缆、负载、精度和环境边界选型，预留噪声、温升和浪涌余量。
+选型时结合实时性、资源、接口、低功耗、封装、供货和生态，并以具体型号、封装和温度条件下的官方数据手册为准。
+
 ## 典型用法
-用于实时控制、计时和数据处理，设计时检查供电、去耦、终端、保护和诊断测试点。
+传感采集、电机控制、仪表、家电和工业设备。
+
 ## 注意事项
-现场布线和接地会显著影响可靠性；不得忽略共模、ESD、校准和上电状态。
+电源、复位、时钟、启动脚、调试口和去耦必须按手册设计。
+
 ## 常见故障与误区
-常见问题包括电平不兼容、终端错误、输入悬空、地址冲突、引脚后缀或测量方法不一致。
+资源不足、复用冲突、中断阻塞、看门狗误用或电源完整性差。

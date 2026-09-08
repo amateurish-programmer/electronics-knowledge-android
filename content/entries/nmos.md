@@ -5,29 +5,35 @@ title: N沟道MOSFET
 englishName: N-Channel MOSFET
 aliases: N-Channel MOSFET|nmos
 categoryId: semiconductor
-summary: N沟道MOSFET常用于整流、放大、开关和功率变换。
-keywords: 整流|放大|开关和功率变换
+summary: 栅极高于源极时导通的 N 沟道 MOSFET，常作低边和同步开关。
+keywords: 低边负载|同步整流|半桥和电源开关
 image: images/semiconductor.svg
 imageAlt: N沟道MOSFET分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
-relatedIds:
-sourceTitle: N沟道MOSFET技术资料
+relatedIds: mosfet|pmos
+sourceTitle: N沟道MOSFET官方技术资料
 sourcePublisher: Nexperia
 sourceUrl: https://www.nexperia.com/products
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介
-N沟道MOSFET是常见器件，主要用于整流、放大、开关和功率变换。使用前先识别封装、引脚及信号方向。
+栅极高于源极时导通的 N 沟道 MOSFET，常作低边和同步开关。
+
 ## 工作原理
-其材料结构或内部电路把输入条件转换为预期响应。先确认静态工作点，再检查动态过程。
+正栅源电压形成电子沟道，连接漏极和源极。
+
 ## 关键参数
-重点核对引脚、耐压、电流、损耗、速度、结温和安全工作区，数值以完整型号、封装和温度条件下的数据手册为准。
+VDS、ID、不同 VGS 的 RDS(on)、栅电荷、SOA、体二极管和热阻。
+
 ## 选型要点
-由实际电压、电流、频率、精度和环境反推规格，并保留温升与浪涌余量。
+选型时结合电压电流、逻辑驱动、频率、损耗和散热，并以具体型号、封装和温度条件下的官方数据手册为准。
+
 ## 典型用法
-用于整流、放大、开关和功率变换，设计时同时检查外围、去耦、保护、回流路径和测试点。
+低边负载、同步整流、半桥和电源开关。
+
 ## 注意事项
-核对引脚、极性、绝对最大额定和散热，不得用典型值代替保证值。
+高边使用通常需要自举或隔离驱动。
+
 ## 常见故障与误区
-常见问题包括引脚识别错误、越界使用、外围参数照搬以及测量方法不当。
+把阈值当导通条件、D/S 认错、栅极悬空或死区不足。

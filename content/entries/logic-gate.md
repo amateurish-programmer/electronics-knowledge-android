@@ -5,29 +5,35 @@ title: 逻辑门
 englishName: Logic Gate
 aliases: Logic Gate|logic-gate
 categoryId: digital-control
-summary: 逻辑门常用于逻辑控制、存储和时序处理。
-keywords: 逻辑控制|存储和时序处理
+summary: 按布尔关系处理数字输入，是组合逻辑的基本单元。
+keywords: 信号组合|使能|译码|极性变换和状态判断
 image: images/digital-control.svg
 imageAlt: 逻辑门分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
-relatedIds:
-sourceTitle: 逻辑门技术资料
+relatedIds: 74hc00|flip-flop
+sourceTitle: 逻辑门官方技术资料
 sourcePublisher: Texas Instruments
 sourceUrl: https://www.ti.com/logic-voltage-translation/overview.html
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介
-逻辑门用于逻辑控制、存储和时序处理，设计前应明确接口、供电和负载条件。
+按布尔关系处理数字输入，是组合逻辑的基本单元。
+
 ## 工作原理
-内部模拟或数字电路按输入状态产生受控输出。分析时先看静态边界，再核对动态和时序条件。
+晶体管网络把输入电平映射为与、或、非、异或等输出。
+
 ## 关键参数
-重点核对供电与阈值、时钟、容量、接口时序、上电状态和封装，以具体厂家完整型号的数据手册为准。
+逻辑功能、供电、阈值、延迟、驱动、扇出、功耗和容限。
+
 ## 选型要点
-从实际边界反推规格，为温升、噪声、浪涌、老化和批次差异留余量。
+选型时结合逻辑系列、电平、速度、负载和施密特需求，并以具体型号、封装和温度条件下的官方数据手册为准。
+
 ## 典型用法
-典型用于逻辑控制、存储和时序处理，外围需同时检查偏置、去耦、保护和测试点。
+信号组合、使能、译码、极性变换和状态判断。
+
 ## 注意事项
-输入不得悬空或越过电源轨，电源回路与地线布局应符合数据手册建议。
+未用 CMOS 输入不能悬空，不同系列阈值不可想当然兼容。
+
 ## 常见故障与误区
-常见问题是忽略完整后缀、上电状态、接口时序、稳定条件或散热要求。
+真值表错误、输入悬空、扇出超限或电平不兼容。

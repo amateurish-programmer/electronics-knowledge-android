@@ -5,29 +5,35 @@ title: 电压比较器
 englishName: Comparator
 aliases: Comparator|comparator
 categoryId: analog-power
-summary: 电压比较器常用于信号调理和电源控制。
-keywords: 信号调理和电源控制
+summary: 比较两个模拟电压并输出逻辑状态，适合阈值检测和波形整形。
+keywords: 过压欠压|零交越|窗口比较和 RC 波形整形
 image: images/analog-power.svg
 imageAlt: 电压比较器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
-relatedIds:
-sourceTitle: 电压比较器技术资料
+relatedIds: lm393|op-amp
+sourceTitle: 电压比较器官方技术资料
 sourcePublisher: Texas Instruments
 sourceUrl: https://www.ti.com/power-management/overview.html
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介
-电压比较器是常见器件，主要用于信号调理和电源控制。使用前先识别封装、引脚及信号方向。
+比较两个模拟电压并输出逻辑状态，适合阈值检测和波形整形。
+
 ## 工作原理
-其材料结构或内部电路把输入条件转换为预期响应。先确认静态工作点，再检查动态过程。
+高增益差分级判断输入差值符号，输出级通常进入高或低饱和状态。
+
 ## 关键参数
-重点核对供电、输入输出范围、精度、带宽、噪声、效率和热阻，数值以完整型号、封装和温度条件下的数据手册为准。
+输入共模范围、失调、传播延迟、迟滞、输出类型和供电范围。
+
 ## 选型要点
-由实际电压、电流、频率、精度和环境反推规格，并保留温升与浪涌余量。
+选型时结合阈值精度、速度、输入范围、输出接口和功耗，并以具体型号、封装和温度条件下的官方数据手册为准。
+
 ## 典型用法
-用于信号调理和电源控制，设计时同时检查外围、去耦、保护、回流路径和测试点。
+过压欠压、零交越、窗口比较和 RC 波形整形。
+
 ## 注意事项
-核对引脚、极性、绝对最大额定和散热，不得用典型值代替保证值。
+开漏输出需要上拉；无迟滞时慢信号会在阈值附近抖动。
+
 ## 常见故障与误区
-常见问题包括引脚识别错误、越界使用、外围参数照搬以及测量方法不当。
+把运放当高速比较器、输入越过共模范围、缺上拉或正反馈方向错误。

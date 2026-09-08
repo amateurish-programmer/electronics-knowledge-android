@@ -5,29 +5,35 @@ title: 看门狗定时器
 englishName: Watchdog Timer
 aliases: Watchdog Timer|watchdog
 categoryId: digital-control
-summary: 看门狗定时器用于实时控制、计时和数据处理。
-keywords: 实时控制|计时和数据处理
+summary: 看门狗在软件未按时喂狗时复位或告警，用于恢复失控系统。
+keywords: 嵌入式控制器死机恢复|任务监控和安全状态切换
 image: images/digital-control.svg
 imageAlt: 看门狗定时器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
-relatedIds:
-sourceTitle: 看门狗定时器技术资料
+relatedIds: mcu|stm32f103
+sourceTitle: 看门狗定时器官方技术资料
 sourcePublisher: STMicroelectronics
 sourceUrl: https://www.st.com/en/microcontrollers-microprocessors.html
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介
-看门狗定时器是常见控制与接口器件，主要用于实时控制、计时和数据处理。
+看门狗在软件未按时喂狗时复位或告警，用于恢复失控系统。
+
 ## 工作原理
-内部电路或敏感结构把输入信号、总线状态或物理量转换为可处理的电信号。
+独立计时器在服务窗口内未收到规定序列就产生复位，窗口型还能检测过早喂狗。
+
 ## 关键参数
-重点核对供电、时钟、存储、外设、上电状态和封装，并以完整型号、封装和温度条件的数据手册为准。
+超时时间、窗口、时钟独立性、复位脉宽、启动状态和故障输出。
+
 ## 选型要点
-结合节点数量、线缆、负载、精度和环境边界选型，预留噪声、温升和浪涌余量。
+选型时结合故障恢复时间、独立性、窗口需求、低功耗和外部/内部方案，并以具体型号、封装和温度条件下的官方数据手册为准。
+
 ## 典型用法
-用于实时控制、计时和数据处理，设计时检查供电、去耦、终端、保护和诊断测试点。
+嵌入式控制器死机恢复、任务监控和安全状态切换。
+
 ## 注意事项
-现场布线和接地会显著影响可靠性；不得忽略共模、ESD、校准和上电状态。
+喂狗应由健康检查汇总触发，不能在无条件循环或中断中机械执行。
+
 ## 常见故障与误区
-常见问题包括电平不兼容、终端错误、输入悬空、地址冲突、引脚后缀或测量方法不一致。
+启动耗时超限、调试时反复复位、所有任务未纳入健康检查或时钟源同故障。

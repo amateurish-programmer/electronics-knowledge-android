@@ -5,29 +5,35 @@ title: 整流二极管
 englishName: Rectifier Diode
 aliases: Rectifier Diode|rectifier-diode
 categoryId: semiconductor
-summary: 整流二极管常用于整流、放大、开关和功率变换。
-keywords: 整流|放大|开关和功率变换
+summary: 为电源整流优化的二极管，可承受较大正向电流和反向电压。
+keywords: 工频整流|续流和一般电源极性保护
 image: images/semiconductor.svg
 imageAlt: 整流二极管分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
-relatedIds:
-sourceTitle: 整流二极管技术资料
+relatedIds: diode|bridge-rectifier
+sourceTitle: 整流二极管官方技术资料
 sourcePublisher: Nexperia
 sourceUrl: https://www.nexperia.com/products
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介
-整流二极管是常见电子元器件，主要用于整流、放大、开关和功率变换。使用前应识别封装、引脚和能量或信号方向。
+为电源整流优化的二极管，可承受较大正向电流和反向电压。
+
 ## 工作原理
-器件通过材料结构把输入条件转换为预期电气响应。分析时先确认静态工作点，再检查动态过程。
+正向偏置导电、反向偏置截止，结区载流子存储决定恢复速度。
+
 ## 关键参数
-重点核对引脚、耐压、电流、损耗、速度、结温和安全工作区，数值以完整型号、封装和温度条件下的数据手册为准。
+峰值反压、平均电流、浪涌、正向压降、恢复时间和热阻。
+
 ## 选型要点
-从实际电压、电流、频率和环境反推规格，为温升、浪涌和批次差异留出余量。
+选型时结合交流峰值、负载、浪涌、频率、损耗和散热，并以具体型号、封装和温度条件下的官方数据手册为准。
+
 ## 典型用法
-典型场景包括整流、放大、开关和功率变换，原理图还要检查外围、保护、回流路径和测试点。
+工频整流、续流和一般电源极性保护。
+
 ## 注意事项
-不得用典型值代替保证值；超出绝对最大额定值可能造成永久损坏。
+高频开关应选快恢复或肖特基，普通管恢复损耗可能很大。
+
 ## 常见故障与误区
-常见问题是引脚或极性识别错误、忽略额定条件、外围参数照搬和测量方法不当。
+耐压按有效值选、浪涌不足、散热差或普通管用于高频。

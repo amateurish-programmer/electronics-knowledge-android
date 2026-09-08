@@ -5,29 +5,35 @@ title: 隔离数字输入
 englishName: Isolated Digital Input
 aliases: Isolated Digital Input|isolated-digital-input
 categoryId: interface
-summary: 隔离数字输入用于设备互连、工业总线和隔离输入。
-keywords: 设备互连|工业总线和隔离输入
+summary: 把现场开关量转换为逻辑信号并提供电气隔离，提高工业输入的安全与抗扰度。
+keywords: PLC 和工业控制器的 12/24 V 开关量采集
 image: images/interface.svg
 imageAlt: 隔离数字输入分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
-relatedIds:
-sourceTitle: 隔离数字输入技术资料
+relatedIds: optocoupler|tvs-diode
+sourceTitle: 隔离数字输入官方技术资料
 sourcePublisher: Texas Instruments
 sourceUrl: https://www.ti.com/interface/overview.html
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介
-隔离数字输入是常见控制与接口器件，主要用于设备互连、工业总线和隔离输入。
+把现场开关量转换为逻辑信号并提供电气隔离，提高工业输入的安全与抗扰度。
+
 ## 工作原理
-内部电路或敏感结构把输入信号、总线状态或物理量转换为可处理的电信号。
+限流整形网络驱动光耦或数字隔离器，隔离侧恢复稳定逻辑。
+
 ## 关键参数
-重点核对逻辑电压、线路电平、速率、共模范围、终端、失效保护和ESD，并以完整型号、封装和温度条件的数据手册为准。
+输入电压电流、阈值、迟滞、隔离耐压、CMTI、延迟和极性。
+
 ## 选型要点
-结合节点数量、线缆、负载、精度和环境边界选型，预留噪声、温升和浪涌余量。
+选型时结合现场电压、漏电流、响应时间、隔离等级和标准，并以具体型号、封装和温度条件下的官方数据手册为准。
+
 ## 典型用法
-用于设备互连、工业总线和隔离输入，设计时检查供电、去耦、终端、保护和诊断测试点。
+PLC 和工业控制器的 12/24 V 开关量采集。
+
 ## 注意事项
-现场布线和接地会显著影响可靠性；不得忽略共模、ESD、校准和上电状态。
+隔离两侧保持爬电距离，输入热耗和浪涌单独校核。
+
 ## 常见故障与误区
-常见问题包括电平不兼容、终端错误、输入悬空、地址冲突、引脚后缀或测量方法不一致。
+限流电阻过热、阈值不当、共地破坏隔离或反接。

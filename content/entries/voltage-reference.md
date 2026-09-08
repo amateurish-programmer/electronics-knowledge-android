@@ -5,29 +5,35 @@ title: 电压基准
 englishName: Voltage Reference
 aliases: Voltage Reference|voltage-reference
 categoryId: analog-power
-summary: 电压基准常用于信号调理、电源变换和精密测量。
-keywords: 信号调理|电源变换和精密测量
+summary: 提供低漂移、低噪声的基准电压，决定精密 ADC、DAC 和控制环路的尺度。
+keywords: ADC/DAC 参考|校准源|精密比较阈值和测量基准
 image: images/analog-power.svg
 imageAlt: 电压基准分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
-relatedIds:
-sourceTitle: 电压基准技术资料
+relatedIds: adc|tl431
+sourceTitle: 电压基准官方技术资料
 sourcePublisher: Texas Instruments
 sourceUrl: https://www.ti.com/power-management/overview.html
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介
-电压基准用于信号调理、电源变换和精密测量，设计前应明确接口、供电和负载条件。
+提供低漂移、低噪声的基准电压，决定精密 ADC、DAC 和控制环路的尺度。
+
 ## 工作原理
-内部模拟或数字电路按输入状态产生受控输出。分析时先看静态边界，再核对动态和时序条件。
+带隙、埋藏齐纳或其他结构产生对电源和温度不敏感的稳定电压。
+
 ## 关键参数
-重点核对供电、输入输出范围、精度、带宽、噪声、效率和热阻，以具体厂家完整型号的数据手册为准。
+初始精度、温漂、长期漂移、噪声、负载调整、静态电流和启动。
+
 ## 选型要点
-从实际边界反推规格，为温升、噪声、浪涌、老化和批次差异留余量。
+选型时结合目标精度、温区、噪声、负载、功耗和封装应力，并以具体型号、封装和温度条件下的官方数据手册为准。
+
 ## 典型用法
-典型用于信号调理、电源变换和精密测量，外围需同时检查偏置、去耦、保护和测试点。
+ADC/DAC 参考、校准源、精密比较阈值和测量基准。
+
 ## 注意事项
-输入不得悬空或越过电源轨，电源回路与地线布局应符合数据手册建议。
+布局需隔离热源和数字噪声，输出电容必须符合稳定性要求。
+
 ## 常见故障与误区
-常见问题是忽略完整后缀、上电状态、接口时序、稳定条件或散热要求。
+只看初始精度、忽略温漂和焊接应力、负载过大或滤波电容导致振荡。

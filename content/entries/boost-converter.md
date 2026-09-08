@@ -5,29 +5,35 @@ title: 升压型DC-DC
 englishName: Boost Converter
 aliases: Boost Converter|boost-converter
 categoryId: analog-power
-summary: 升压型DC-DC常用于信号调理、电源变换和精密测量。
-keywords: 信号调理|电源变换和精密测量
+summary: 把较低直流电压转换为较高直流电压，常用于电池和母线升压。
+keywords: 单节电池升压|LED 电源前级和辅助高压轨
 image: images/analog-power.svg
 imageAlt: 升压型DC-DC分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
-relatedIds:
-sourceTitle: 升压型DC-DC技术资料
+relatedIds: buck-converter|inductor
+sourceTitle: 升压型DC-DC官方技术资料
 sourcePublisher: Texas Instruments
 sourceUrl: https://www.ti.com/power-management/overview.html
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介
-升压型DC-DC用于信号调理、电源变换和精密测量，设计前应明确接口、供电和负载条件。
+把较低直流电压转换为较高直流电压，常用于电池和母线升压。
+
 ## 工作原理
-内部模拟或数字电路按输入状态产生受控输出。分析时先看静态边界，再核对动态和时序条件。
+开关导通时电感储能，关断时电感电流与输入共同向输出供能。
+
 ## 关键参数
-重点核对供电、输入输出范围、精度、带宽、噪声、效率和热阻，以具体厂家完整型号的数据手册为准。
+输入范围、输出、占空比、频率、电感饱和、纹波、效率和环路。
+
 ## 选型要点
-从实际边界反推规格，为温升、噪声、浪涌、老化和批次差异留余量。
+选型时结合最低输入、最大负载、启动、效率、瞬态和耐压余量，并以具体型号、封装和温度条件下的官方数据手册为准。
+
 ## 典型用法
-典型用于信号调理、电源变换和精密测量，外围需同时检查偏置、去耦、保护和测试点。
+单节电池升压、LED 电源前级和辅助高压轨。
+
 ## 注意事项
-输入不得悬空或越过电源轨，电源回路与地线布局应符合数据手册建议。
+基本拓扑通常不能切断输入直通路径，启动与空载可能过冲。
+
 ## 常见故障与误区
-常见问题是忽略完整后缀、上电状态、接口时序、稳定条件或散热要求。
+电感饱和、开关耐压不足、反馈受噪声或补偿不稳定。

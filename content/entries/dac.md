@@ -5,29 +5,35 @@ title: 数模转换器
 englishName: Digital-to-Analog Converter
 aliases: Digital-to-Analog Converter|dac
 categoryId: analog-power
-summary: 数模转换器常用于信号调理、电源变换和精密测量。
-keywords: 信号调理|电源变换和精密测量
+summary: 把数字码转换为模拟电压或电流，用于设定、控制和波形输出。
+keywords: 偏置设定|模拟控制量|音频和任意波形生成
 image: images/analog-power.svg
 imageAlt: 数模转换器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
-relatedIds:
-sourceTitle: 数模转换器技术资料
+relatedIds: adc|voltage-reference
+sourceTitle: 数模转换器官方技术资料
 sourcePublisher: Texas Instruments
 sourceUrl: https://www.ti.com/power-management/overview.html
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介
-数模转换器用于信号调理、电源变换和精密测量，设计前应明确接口、供电和负载条件。
+把数字码转换为模拟电压或电流，用于设定、控制和波形输出。
+
 ## 工作原理
-内部模拟或数字电路按输入状态产生受控输出。分析时先看静态边界，再核对动态和时序条件。
+电阻网络、电流源或电容阵列按数字权重叠加，并由参考源确定满量程。
+
 ## 关键参数
-重点核对供电、输入输出范围、精度、带宽、噪声、效率和热阻，以具体厂家完整型号的数据手册为准。
+分辨率、更新率、INL/DNL、建立时间、参考、输出范围、毛刺和驱动能力。
+
 ## 选型要点
-从实际边界反推规格，为温升、噪声、浪涌、老化和批次差异留余量。
+选型时结合精度、速度、单调性、通道、输出缓冲和参考方案，并以具体型号、封装和温度条件下的官方数据手册为准。
+
 ## 典型用法
-典型用于信号调理、电源变换和精密测量，外围需同时检查偏置、去耦、保护和测试点。
+偏置设定、模拟控制量、音频和任意波形生成。
+
 ## 注意事项
-输入不得悬空或越过电源轨，电源回路与地线布局应符合数据手册建议。
+输出负载和参考源必须满足稳定条件，高速更新需处理重构滤波。
+
 ## 常见故障与误区
-常见问题是忽略完整后缀、上电状态、接口时序、稳定条件或散热要求。
+码制理解错误、参考不稳、输出超负载、毛刺被误当噪声或未留建立时间。

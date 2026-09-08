@@ -5,29 +5,35 @@ title: OLED显示模块
 englishName: OLED Display Module
 aliases: OLED Display Module|oled-module
 categoryId: display
-summary: OLED显示模块用于状态、字符、数字和声音提示。
-keywords: 状态|字符|数字和声音提示
+summary: 自发光 OLED 显示模块，对比度高且无需背光，常用 I²C 或 SPI 接口。
+keywords: 便携设备|仪表菜单|图标和小型图形显示
 image: images/display.svg
 imageAlt: OLED显示模块分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
-relatedIds:
-sourceTitle: OLED显示模块技术资料
+relatedIds: lcd1602|seven-segment
+sourceTitle: OLED显示模块官方技术资料
 sourcePublisher: Vishay
 sourceUrl: https://www.vishay.com/en/optical-sensors/
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介
-OLED显示模块是常见电子部件，主要用于状态、字符、数字和声音提示。安装前确认方向、接口、机械尺寸和负载性质。
+自发光 OLED 显示模块，对比度高且无需背光，常用 I²C 或 SPI 接口。
+
 ## 工作原理
-部件通过电磁、机械、光电、压阻或功率半导体结构实现检测、连接、显示或保护。
+有机发光层在电流作用下发光，控制器从显存数据驱动像素矩阵。
+
 ## 关键参数
-重点核对供电、驱动、亮度或声压、功耗、尺寸和寿命，全部数值以具体型号、封装及规定工况下的数据手册为准。
+分辨率、控制器、接口、供电、逻辑电平、亮度、功耗和寿命。
+
 ## 选型要点
-由实际负载、环境和寿命要求反推规格，对温升、浪涌、机械应力和老化留余量。
+选型时结合尺寸、像素、颜色、接口、视角、功耗和工作温度，并以具体型号、封装和温度条件下的官方数据手册为准。
+
 ## 典型用法
-用于状态、字符、数字和声音提示，同时检查驱动、限流、吸收、保护、安装固定和测试点。
+便携设备、仪表菜单、图标和小型图形显示。
+
 ## 注意事项
-按负载类型降额；感性负载增加吸收，显示声光器件核对限流，保护器件核对故障能量。
+静态高亮画面会老化或烧屏；模块电源和初始化命令必须匹配。
+
 ## 常见故障与误区
-常见问题是额定值按纯阻性负载套用、忽略温升与寿命、接线方向错误或机械安装应力过大。
+I²C 地址错误、控制器型号不符、供电次序错、字库越界或屏幕残影。

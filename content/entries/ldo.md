@@ -5,29 +5,35 @@ title: 低压差线性稳压器
 englishName: Low Dropout Regulator
 aliases: Low Dropout Regulator|ldo
 categoryId: analog-power
-summary: 低压差线性稳压器常用于信号调理和电源控制。
-keywords: 信号调理和电源控制
+summary: 在较小输入输出压差下提供稳定、低噪声电压的线性稳压器。
+keywords: 模拟前端|射频|传感器和数字电路的局部稳压
 image: images/analog-power.svg
 imageAlt: 低压差线性稳压器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
-relatedIds:
-sourceTitle: 低压差线性稳压器技术资料
+relatedIds: ams1117|buck-converter
+sourceTitle: 低压差线性稳压器官方技术资料
 sourcePublisher: Texas Instruments
 sourceUrl: https://www.ti.com/power-management/overview.html
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介
-低压差线性稳压器是常见器件，主要用于信号调理和电源控制。使用前先识别封装、引脚及信号方向。
+在较小输入输出压差下提供稳定、低噪声电压的线性稳压器。
+
 ## 工作原理
-其材料结构或内部电路把输入条件转换为预期响应。先确认静态工作点，再检查动态过程。
+反馈环路调节串联调整管，多余输入功率转化为热。
+
 ## 关键参数
-重点核对供电、输入输出范围、精度、带宽、噪声、效率和热阻，数值以完整型号、封装和温度条件下的数据手册为准。
+输入输出、压差、电流、静态电流、噪声、PSRR、电容和热阻。
+
 ## 选型要点
-由实际电压、电流、频率、精度和环境反推规格，并保留温升与浪涌余量。
+选型时结合最小输入、负载、噪声、待机功耗、散热和电容，并以具体型号、封装和温度条件下的官方数据手册为准。
+
 ## 典型用法
-用于信号调理和电源控制，设计时同时检查外围、去耦、保护、回流路径和测试点。
+模拟前端、射频、传感器和数字电路的局部稳压。
+
 ## 注意事项
-核对引脚、极性、绝对最大额定和散热，不得用典型值代替保证值。
+按最差压差和温升校核，并遵守输出电容稳定条件。
+
 ## 常见故障与误区
-常见问题包括引脚识别错误、越界使用、外围参数照搬以及测量方法不当。
+输入余量不足、热保护反复、输出振荡或关断脚悬空。

@@ -5,29 +5,35 @@ title: NPN三极管
 englishName: NPN Transistor
 aliases: NPN Transistor|npn-transistor
 categoryId: semiconductor
-summary: NPN三极管常用于整流、放大、开关和功率变换。
-keywords: 整流|放大|开关和功率变换
+summary: 基极相对发射极正向驱动时导通的 NPN 双极型晶体管。
+keywords: 低边开关|小信号放大|恒流源和电平转换
 image: images/semiconductor.svg
 imageAlt: NPN三极管分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
-relatedIds:
-sourceTitle: NPN三极管技术资料
+relatedIds: bjt|pnp-transistor
+sourceTitle: NPN三极管官方技术资料
 sourcePublisher: Nexperia
 sourceUrl: https://www.nexperia.com/products
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介
-NPN三极管是常见器件，主要用于整流、放大、开关和功率变换。使用前先识别封装、引脚及信号方向。
+基极相对发射极正向驱动时导通的 NPN 双极型晶体管。
+
 ## 工作原理
-其材料结构或内部电路把输入条件转换为预期响应。先确认静态工作点，再检查动态过程。
+基极注入载流子，使集电极到发射极形成受控电流。
+
 ## 关键参数
-重点核对引脚、耐压、电流、损耗、速度、结温和安全工作区，数值以完整型号、封装和温度条件下的数据手册为准。
+VCEO、IC、hFE、VCE(sat)、基极电流、功耗、频率和 SOA。
+
 ## 选型要点
-由实际电压、电流、频率、精度和环境反推规格，并保留温升与浪涌余量。
+选型时结合负载、耐压、强迫 β、速度、封装和散热，并以具体型号、封装和温度条件下的官方数据手册为准。
+
 ## 典型用法
-用于整流、放大、开关和功率变换，设计时同时检查外围、去耦、保护、回流路径和测试点。
+低边开关、小信号放大、恒流源和电平转换。
+
 ## 注意事项
-核对引脚、极性、绝对最大额定和散热，不得用典型值代替保证值。
+基极必须限流，感性负载需续流保护。
+
 ## 常见故障与误区
-常见问题包括引脚识别错误、越界使用、外围参数照搬以及测量方法不当。
+E/C 反接、基流不足、GPIO 过流或没有续流二极管。

@@ -5,29 +5,35 @@ title: 旋转编码器
 englishName: Rotary Encoder
 aliases: Rotary Encoder|rotary-encoder
 categoryId: electromechanical
-summary: 旋转编码器用于负载切换、人机输入和可靠连接。
-keywords: 负载切换|人机输入和可靠连接
+summary: 把旋转位移转换为脉冲或数字位置，增量式常带 A/B 正交输出。
+keywords: 菜单旋钮|电机位置和转速测量
 image: images/electromechanical.svg
 imageAlt: 旋转编码器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
-relatedIds:
-sourceTitle: 旋转编码器技术资料
+relatedIds: push-button|hall-sensor
+sourceTitle: 旋转编码器官方技术资料
 sourcePublisher: Omron
 sourceUrl: https://components.omron.com/
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介
-旋转编码器是常见电子部件，主要用于负载切换、人机输入和可靠连接。安装前确认方向、接口、机械尺寸和负载性质。
+把旋转位移转换为脉冲或数字位置，增量式常带 A/B 正交输出。
+
 ## 工作原理
-部件通过电磁、机械、光电、压阻或功率半导体结构实现检测、连接、显示或保护。
+相差约 90° 的两个通道产生边沿，先后顺序表示方向。
+
 ## 关键参数
-重点核对触点或连接形式、额定电流电压、寿命、温升、安装和防护，全部数值以具体型号、封装及规定工况下的数据手册为准。
+每转脉冲、输出类型、最高转速、相位、寿命、轴型和按键。
+
 ## 选型要点
-由实际负载、环境和寿命要求反推规格，对温升、浪涌、机械应力和老化留余量。
+选型时结合分辨率、转速、尺寸、触感、接口和环境，并以具体型号、封装和温度条件下的官方数据手册为准。
+
 ## 典型用法
-用于负载切换、人机输入和可靠连接，同时检查驱动、限流、吸收、保护、安装固定和测试点。
+菜单旋钮、电机位置和转速测量。
+
 ## 注意事项
-按负载类型降额；感性负载增加吸收，显示声光器件核对限流，保护器件核对故障能量。
+机械型需消抖，高速采集宜用定时器编码器模式。
+
 ## 常见故障与误区
-常见问题是额定值按纯阻性负载套用、忽略温升与寿命、接线方向错误或机械安装应力过大。
+A/B 接反、漏计、消抖过度、上拉缺失或倍频计算错。

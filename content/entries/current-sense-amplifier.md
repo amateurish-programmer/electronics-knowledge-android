@@ -5,29 +5,35 @@ title: 电流检测放大器
 englishName: Current Sense Amplifier
 aliases: Current Sense Amplifier|current-sense-amplifier
 categoryId: analog-power
-summary: 电流检测放大器常用于信号调理、电源变换和精密测量。
-keywords: 信号调理|电源变换和精密测量
+summary: 测量分流电阻两端的小差分电压，并在较大共模电压下输出可用信号。
+keywords: 电池|电机|电源和过流保护中的电流监测
 image: images/analog-power.svg
 imageAlt: 电流检测放大器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
-relatedIds:
-sourceTitle: 电流检测放大器技术资料
+relatedIds: shunt-resistor|adc
+sourceTitle: 电流检测放大器官方技术资料
 sourcePublisher: Texas Instruments
 sourceUrl: https://www.ti.com/power-management/overview.html
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介
-电流检测放大器用于信号调理、电源变换和精密测量，设计前应明确接口、供电和负载条件。
+测量分流电阻两端的小差分电压，并在较大共模电压下输出可用信号。
+
 ## 工作原理
-内部模拟或数字电路按输入状态产生受控输出。分析时先看静态边界，再核对动态和时序条件。
+高共模抑制差分放大器按固定或可设增益放大分流压降。
+
 ## 关键参数
-重点核对供电、输入输出范围、精度、带宽、噪声、效率和热阻，以具体厂家完整型号的数据手册为准。
+共模范围、差分范围、增益、失调、CMRR、带宽、漂移和输出摆幅。
+
 ## 选型要点
-从实际边界反推规格，为温升、噪声、浪涌、老化和批次差异留余量。
+选型时结合高边/低边位置、双向需求、量程、精度和响应速度，并以具体型号、封装和温度条件下的官方数据手册为准。
+
 ## 典型用法
-典型用于信号调理、电源变换和精密测量，外围需同时检查偏置、去耦、保护和测试点。
+电池、电机、电源和过流保护中的电流监测。
+
 ## 注意事项
-输入不得悬空或越过电源轨，电源回路与地线布局应符合数据手册建议。
+开尔文连接分流电阻，输入滤波需保持两路阻抗匹配。
+
 ## 常见故障与误区
-常见问题是忽略完整后缀、上电状态、接口时序、稳定条件或散热要求。
+共模越界、走线压降计入测量、输出饱和或忽略失调对小电流的影响。

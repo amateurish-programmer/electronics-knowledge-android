@@ -5,29 +5,35 @@ title: 电流互感器
 englishName: Current Transformer
 aliases: Current Transformer|current-transformer
 categoryId: sensor
-summary: 电流互感器用于电流、光、运动、压力和环境测量。
-keywords: 电流|光|运动|压力和环境测量
+summary: 电流互感器以磁耦合隔离测量交流电流，输出与匝数比相关。
+keywords: 电能计量|交流过流检测和隔离电流监测
 image: images/sensor.svg
 imageAlt: 电流互感器分类示意图
 imageAttribution: 电子专业知识库项目自绘
 imageLicense: CC-BY-4.0
-relatedIds:
-sourceTitle: 电流互感器技术资料
+relatedIds: shunt-resistor|adc
+sourceTitle: 电流互感器官方技术资料
 sourcePublisher: Analog Devices
 sourceUrl: https://www.analog.com/en/product-category/sensors.html
 sourceAccessedAt: 2026-09-07
 ---
 ## 简介
-电流互感器是常见电子部件，主要用于电流、光、运动、压力和环境测量。安装前确认方向、接口、机械尺寸和负载性质。
+电流互感器以磁耦合隔离测量交流电流，输出与匝数比相关。
+
 ## 工作原理
-部件通过电磁、机械、光电、压阻或功率半导体结构实现检测、连接、显示或保护。
+一次交流电流建立交变磁通，二次绕组产生电流，经负载电阻转换为电压。
+
 ## 关键参数
-重点核对量程、精度、响应、温漂、接口和安装条件，全部数值以具体型号、封装及规定工况下的数据手册为准。
+变比、额定一次电流、负载、精度、相位误差、频率、饱和和绝缘。
+
 ## 选型要点
-由实际负载、环境和寿命要求反推规格，对温升、浪涌、机械应力和老化留余量。
+选型时结合最大电流、测量频段、精度、孔径、负载和安全等级，并以具体型号、封装和温度条件下的官方数据手册为准。
+
 ## 典型用法
-用于电流、光、运动、压力和环境测量，同时检查驱动、限流、吸收、保护、安装固定和测试点。
+电能计量、交流过流检测和隔离电流监测。
+
 ## 注意事项
-按负载类型降额；感性负载增加吸收，显示声光器件核对限流，保护器件核对故障能量。
+有一次电流时二次侧不得开路，高压场合需满足绝缘和安规。
+
 ## 常见故障与误区
-常见问题是额定值按纯阻性负载套用、忽略温升与寿命、接线方向错误或机械安装应力过大。
+负载电阻错误、磁芯饱和、安装方向导致相位反、开路产生高压。
