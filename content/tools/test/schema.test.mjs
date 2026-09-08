@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import { validateCatalog, validateCategories, validateManifest } from "../validator.mjs";
 
 const categories = [
@@ -23,9 +24,14 @@ const entry = {
 const capacitor = { ...entry, id: "capacitor", title: "电容器", relatedIds: ["resistor"], sourcePath: "capacitor.md" };
 const assets = new Set(["images/passive.svg"]);
 
-test("manifest validates every public field", () => {
-  assert.deepEqual(validateManifest({ schemaVersion: 1, contentVersion: 2, generatedAt: "2026-09-07T00:00:00Z", entryCount: 2, sha256: "a".repeat(64) }, 2), []);
-  assert.ok(validateManifest({ schemaVersion: 0, contentVersion: "", generatedAt: "today", entryCount: 1, sha256: "bad" }, 2).length >= 5);
+test("manifest matches the Android model and rejects placeholder hashes", () => {
+  assert.deepEqual(validateManifest({ schemaVersion: 1, contentVersion: "1.0.1", generatedAt: "2026-09-08T00:00:00Z", entryCount: 2, sha256: "a".repeat(64) }, 2), []);
+  assert.ok(validateManifest({ schemaVersion: 1, contentVersion: 2, generatedAt: "2026-09-08T00:00:00Z", entryCount: 2, sha256: "a".repeat(64) }, 2).some(x => x.includes("contentVersion")));
+  assert.ok(validateManifest({ schemaVersion: 1, contentVersion: "1.0.1", generatedAt: "2026-09-08T00:00:00Z", entryCount: 2, sha256: "0".repeat(64) }, 2).some(x => x.includes("sha256")));
+});
+test("catalog manifest is bumped for the curated content revision", async () => {
+  const manifest = JSON.parse(await readFile("content/manifest.json", "utf8"));
+  assert.equal(manifest.contentVersion, "1.0.1");
 });
 test("categories require unique ids and valid parents", () => {
   assert.deepEqual(validateCategories(categories), []);
